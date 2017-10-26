@@ -238,10 +238,8 @@ function CircularCntdwn(gs){
     this.stop = false;
     i = 1
     this.interval = setInterval(function() {                
-        this.svg.style.strokeDashoffset = this.initialOffset-(i*(this.initialOffset/this.time));
-        //this.timeSec.innerHTML = this.time -i;               
-        this.timeMin.innerHTML = this.formatSeconds(this.time-i);
-        //this.time--;               
+        this.svg.style.strokeDashoffset = this.initialOffset-(i*(this.initialOffset/this.time));                     
+        this.timeMin.innerHTML = this.formatSeconds(this.time-i);                  
         if (i >= (this.time / 2)*1 && i <= ((this.time / 2)*1)+2) { 
             this.svg.style.stroke = "#ffd000";
             console.log("quartile1");                   
