@@ -95,6 +95,7 @@ GamePlay.prototype.interaction2 = function(gs){
             currentEl = this.letterArray[i];                     
             currentEl.setAttribute("data-active","true");
             currentEl.classList.remove("passed");
+            //TweenMax.to(currentEl,0.3,{className:"+=active"});
             currentEl.classList.add("active");
             //currentEl.style.background = "#999";
 
