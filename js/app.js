@@ -71,7 +71,6 @@ function GamePlay(el,gs){
     //this.interaction(gs);
     this.interaction2(gs);
     this.keyListener(gs);
-
 };
 GamePlay.prototype.interaction2 = function(gs){
     //start new game settings 
