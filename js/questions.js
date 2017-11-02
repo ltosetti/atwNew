@@ -1,151 +1,152 @@
 var qa = {          
     "a":[
-            ["Acqua","disseta gli assetati"],
-            ["Andersen","a Copenhagen gli e' stata dedicata una Sirenetta"],
-            ["Attinia","altro nome dell'anemone di mare"],
-            ["Amedei","Amedeo, 'il fornaretto' idolatrato dai romanisti"],
-            ["Acapulco","citta' messicana celebre per le sue spiagge"],
-            ["Antartide","di quale continente il monte Vinson (5.150 mt.) e' il massiccio piu' alto"],
-            ["Arancia","e' il frutto piu' conosciuto della famiglia delle rutacee"],
-            ["Australia","e' il paese con piu' pecore"],
-            ["Aorta","E' il piu' grande vaso sanguigno del corpo umano"],
-            ["Amen","e' l'ultima parola della Bibbia"],
-            ["Annapurna","fu la prima cima oltre gli 8.000 metri ad essere conquistata"],
-            ["Alaska","fu pagata piu' di 7 milioni di dollari nel 1867 dagli Stati Uniti"],
-            ["Agamennone","fu ucciso da Clitennestra"],
-            ["Aborigeni","gli originari abitanti dell'australia"],
-            ["Artificiali","i 'paradisi' di Baudelaire"],
-            ["Amaro","il 'riso' di Giuseppe De Santis"],
-            ["Angiolieri","il Cecco che si fece beffe del 'dolce stil novo'"],
-            ["auriga","il cocchiere del carro da corsa nell'antica Roma"],
-            ["Africa","il continente che comprende il maggior numero di nazioni"],
-            ["Africa","il continente con la Sierra Leone"],
-            ["Allah","il dio del quale porta il nome la perla piu' grossa del mondo"],
-            ["Abbondio","il Don che camminava in una stradicciola nei pressi del lago di Como il 7 novembre 1628"],
-            ["Arno","il fiume in cui Manzoni fece 'il bucato'"],
-            ["Agamennone","il fratello di Menelao"],
-            ["Arpino","il Giovanni che ha scritto La suora giovane"],
-            ["Anquetil","il Jacques ciclista francese che ha vinto il Tour per quattro volte consecutive"],
-            ["Anarchismo","il movimento politico fondato da Michail Bakunin"],
-            ["Australia","il paese che ha accolto piu' di 75.000 forzati tra il 1750 e il 1840"],
-            ["Ara","il pappagallo che ha le maggiori dimensioni"],
-            ["Arthur AShe","il primo tennista di colore a vincere Wimbledon"],
-            ["Ashe","il primo tennista di colore a vincere Wimbledon"],
-            ["Avati","il Pupi regista italiano che ha fatto Una gita scolastica"],
-            ["Agostino","il santo che ha scritto De civitate Dei"],
-            ["Alcatraz","l'edificio che sorge su di uno scoglio della baia di San Francisco"],
-            ["Aureliano","l'imperatore da cui prese il nome la citta' di Orleans"],
-            ["Amleto","l'opera di Shakespeare nella quale i protagonisti muoiono quasi contemporaneamente"],
-            ["Aida","l'opera di Verdi composta per l'inaugurazione dell'Opera del Cairo"],
-            ["Abbey Road","l'ultimo album dei beatles"],
-            ["Ambrosia","la bevanda degli dei dell'Olimpo"],
-            ["Ande","la catena montuosa percorsa dalla linea ferroviaria piu' alta del mondo"],
-            ["Amsterdam","la citta' in cui si trova il Dam"],
-            ["Acqui","la citta' in cui si trova la cosiddetta Fontana miracolosa, con acqua minerale a 75 gradi"],
-            ["Assuan","la diga che in Egitto ha permesso di strappare 800.000 ettari al deserto"],
-            ["Anastasia","la figlia dello zar Nicola II che scampo' alla morte nel corso della rivoluzione russa"],
-            ["Andrews","la Julie protagonista di Mary Poppins"],
-            ["Agave","La pianta dalla quale si ricava la tequila"],
-            ["Ancora","la porta tatuata Braccio di Ferro"],
-            ["Alcazar","la reggia dei re mori a Siviglia"],
-            ["Actor's Studio","la scuola nella quale si sono formati Marlon Brando e Robert De Niro"],
-            ["Atletica","lo sport che deve il suo nome alla parola greca che significa 'combattimento'"],
-            ["Automobilismo","lo sport in cui Emerson Fittipaldi e' stato campione del mondo"],
-            ["Abolizionisti","negli Stati Uniti erano gli oppositori della schiavitu'"],
-            ["Amigdala","parola che significa 'a forma di mandorla'"],
-            ["Aruspici","prevedevano il futuro studiando le viscere degli animali"],
-            ["anaerobico","processo che si svolge in assenza di ossigeno"],
-            ["Abelardo","scambio' lettere d'amore con Eloisa"],
-            ["Amarone","tipo di vino rosso del Veneto"],
-            ["adenoidi","tonsille faringee"],
-            ["Argentina","vi fu catturato Adolf Eichmann"],
-            ["Aspromonte","vi provengono i pastori del romanzo del 1930 di Corrado Alvaro"],
-            ["Australia","vi si trova il deserto di Simpson"],
-            ["Antartide","vi si trova il mare di Ross"],                   
-            ["Addizzione", "Operazione matematica"],
-            ["Artificiali","'paradisi' di Baudelaire"],
-            ["Arco", "arma con frecce"]
+            ["Acqua","disseta gli assetati"],//CG
+            ["Andersen","a Copenhagen gli e' stata dedicata una Sirenetta"],//geo
+            ["Attinia","altro nome dell'anemone di mare"],//sci
+            ["Amedei","Amedeo, 'il fornaretto' idolatrato dai romanisti"],//cg
+            ["Acapulco","citta' messicana celebre per le sue spiagge"],//geo
+            ["Antartide","di quale continente il monte Vinson (5.150 mt.) e' il massiccio piu' alto"],//geo
+            ["Arancia","e' il frutto piu' conosciuto della famiglia delle rutacee"],//sci
+            ["Australia","e' il paese con piu' pecore"],//geo
+            ["Aorta","E' il piu' grande vaso sanguigno del corpo umano"],//sci
+            ["Amen","e' l'ultima parola della Bibbia"],//cg
+            ["Annapurna","fu la prima cima oltre gli 8.000 metri ad essere conquistata"],//geo
+            ["Alaska","fu pagata piu' di 7 milioni di dollari nel 1867 dagli Stati Uniti"],//geo
+            ["Agamennone","fu ucciso da Clitennestra"],//sto
+            ["Aborigeni","gli originari abitanti dell'australia"],//geo
+            ["Artificiali","i 'paradisi' di Baudelaire"],//cg
+            ["Amaro","il 'riso' di Giuseppe De Santis"],//cg
+            ["Angiolieri","il Cecco che si fece beffe del 'dolce stil novo'"],//cg
+            ["auriga","il cocchiere del carro da corsa nell'antica Roma"],//sto
+            ["Africa","il continente che comprende il maggior numero di nazioni"],//geo
+            ["Africa","il continente con la Sierra Leone"],//geo
+            ["Allah","il dio del quale porta il nome la perla piu' grossa del mondo"],//cg
+            ["Abbondio","il Don che camminava in una stradicciola nei pressi del lago di Como il 7 novembre 1628"],//cg
+            ["Arno","il fiume in cui Manzoni fece 'il bucato'"],//geo
+            ["Agamennone","il fratello di Menelao"],//sto
+            ["Arpino","il Giovanni che ha scritto La suora giovane"],//cg
+            ["Anquetil","il Jacques ciclista francese che ha vinto il Tour per quattro volte consecutive"],//sport
+            ["Anarchismo","il movimento politico fondato da Michail Bakunin"],//cg
+            ["Australia","il paese che ha accolto piu' di 75.000 forzati tra il 1750 e il 1840"],//geo
+            ["Ara","il pappagallo che ha le maggiori dimensioni"],//sci            
+            ["Ashe","il primo tennista di colore a vincere Wimbledon"],//sport
+            ["Avati","il Pupi regista italiano che ha fatto Una gita scolastica"],//movie
+            ["Agostino","il santo che ha scritto De civitate Dei"],//cg
+            ["Alcatraz","l'edificio che sorge su di uno scoglio della baia di San Francisco"],//cg
+            ["Aureliano","l'imperatore da cui prese il nome la citta' di Orleans"],//sto
+            ["Amleto","l'opera di Shakespeare nella quale i protagonisti muoiono quasi contemporaneamente"],//cg
+            ["Aida","l'opera di Verdi composta per l'inaugurazione dell'Opera del Cairo"],//cg
+            ["Abbey Road","l'ultimo album dei beatles"],//music
+            ["Ambrosia","la bevanda degli dei dell'Olimpo"],//sto
+            ["Ande","la catena montuosa percorsa dalla linea ferroviaria piu' alta del mondo"],//geo
+            ["Amsterdam","la citta' in cui si trova il Dam"],//geo
+            ["Acqui","la citta' in cui si trova la cosiddetta Fontana miracolosa, con acqua minerale a 75 gradi"],//geo
+            ["Assuan","la diga che in Egitto ha permesso di strappare 800.000 ettari al deserto"],//geo
+            ["Anastasia","la figlia dello zar Nicola II che scampo' alla morte nel corso della rivoluzione russa"],//sto
+            ["Andrews","la Julie protagonista di Mary Poppins"],//movie
+            ["Agave","La pianta dalla quale si ricava la tequila"],//cg
+            ["Ancora","la porta tatuata Braccio di Ferro"],//comics
+            ["Alcazar","la reggia dei re mori a Siviglia"],//geo
+            ["Actor's Studio","la scuola nella quale si sono formati Marlon Brando e Robert De Niro"],//movie
+            ["Atletica","lo sport che deve il suo nome alla parola greca che significa 'combattimento'"],//sport
+            ["Automobilismo","lo sport in cui Emerson Fittipaldi e' stato campione del mondo"],//sport
+            ["Abolizionisti","negli Stati Uniti erano gli oppositori della schiavitu'"],//sto
+            ["Amigdala","parola che significa 'a forma di mandorla'"],//cg
+            ["Aruspici","prevedevano il futuro studiando le viscere degli animali"],//cg
+            ["anaerobico","processo che si svolge in assenza di ossigeno"],//cg
+            ["Abelardo","scambio' lettere d'amore con Eloisa"],//cg
+            ["Amarone","tipo di vino rosso del Veneto"],//cg
+            ["adenoidi","tonsille faringee"],//cg
+            ["Argentina","vi fu catturato Adolf Eichmann"],//sto
+            ["Aspromonte","vi provengono i pastori del romanzo del 1930 di Corrado Alvaro"],//cg
+            ["Australia","vi si trova il deserto di Simpson"],//geo
+            ["Antartide","vi si trova il mare di Ross"],//geo                   
+            ["Addizzione", "Operazione matematica"],//cg
+            ["Artificiali","'paradisi' di Baudelaire"],//cg
+            ["Arco", "arma con frecce"]//cg
     ],
     "b":[                
-            ["Bianco","e' il colore del lutto nei paesi musulmani"],
-            ["Bardotto","e' il risultato dell'incrocio tra un cavallo e un asina"],
-            ["Brasile","e' la quinta nazione piu' grande del mondo"],
-            ["Beretta","hanno cominciato vendendo archibugi alla Serenissima e finito col vendere pistole all'FBI"],
-            ["Bridge","il campionato del mondo vinto dal 'blue team' italiano"],
-            ["Bacco","il dio del vino per i romani"],
-            ["bianca","il film in cui Moretti (brrr) dice 'Come si fa a dormire con una donna con cui si e' fatto l'amore?'"],
-            ["Buridano","il filosofo al quale si associa un asino morto di fame perche' incerto tra due cibi"],
-            ["Bordin","il Gelindo primo italiano a vincere una maratona olimpica"],
-            ["Bettega","il giocatore di calcio italiano che ha militato a fine carriera nei Toronto Blizzards"],
-            ["Badminton","il gioco con le racchette apparso in Inghilterra verso il 1860"],
-            ["Beach Boys","il gruppo formato dai fratelli Wilson nel 1961"],
-            ["Baltico","il Mare che separa Riga da Stoccolma"],
-            ["Bongiorno","il Mike che disse a una concorrente 'Ahi, ahi, signora Longari, mi e' caduta sull'uccello'"],
-            ["Bongiorno","il Mike presentatore che fu condannato a morte per spionaggio nel 1944 da un tribunale militare tedesco"],
-            ["Baracca","il pilota che aveva sull'aereo il cavallino rampante simbolo della Ferrari"],
-            ["Barbarossa","il soprannome di Federico I imperatore germanico dal 1152 al 1190"],
-            ["Bolscioi","il teatro del piu' famoso corpo di ballo di danza classica di Mosca"],
-            ["Blueberry","il tenente disertore dell'esercito americano che e' un eroe dei fumetti"],
-            ["Brandt","il Willy sindaco di Berlino Ovest che accolse J.F. Kennedy"],
-            ["Bonsai","l'albero nano giapponese"],
-            ["Barbados","Di quale stato é capitale la cittá di Bridgetown"],
-            ["Bolena","l'Anna madre di Elisabetta I di Inghilterra"],
-            ["Bouquet","l'aroma di un vino"],
-            ["Boito","l'Arrigo librettista di Giuseppe Verdi che scrisse la musica di un'opera"],
-            ["Boy-Scouts","l'associazione fondata dall'ufficiale britannico Robert Baden-Powell nel 1907"],
-            ["Brando","l'attore che si rifiuto' di ritirare il secondo premio Oscar"],
-            ["Bergman","l'attrice che ha debuttato nel 1938 con Intermezzo"],
-            ["Bonaccorti","l'Enrica che divento' una star televisiva con la trasmissione Pronto, chi gioca?"],
-            ["Bearzot","l'Enzo commissario tecnico della nazionale italiana vincitrice dei mondiali di calcio di spagna nel 1982"],
-            ["Barletta","la 'Disfida' in cui gli italiani furono guidati da Ettore Fieramosca"],
-            ["Baffi","la caratteristica facciale di Walt Disney che nessun altro collaboratore era autorizzato ad avere"],
-            ["Brindisi","la citta' dalla quale Vittorio Emanuele III si imbarco' per lasciare definitivamente l'Italia"],
-            ["Bruxelles","la citta' in cui fu organizzata l'esposizione universale del 1958"],
-            ["Buenos Aires","la citta' in cui si trova la Casa Rosada"],
-            ["Bouvier","la Jacqueline che ebbe J.F. Kennedy come primo marito"],
-            ["Bronzo","la lega formata da rame e stagno"],
-            ["Bose'","la Lucia protagonista del film di Maselli Gli sbandati"],
-            ["Bianchina","la macchina di Fantozzi"],
-            ["Butterfly","La Madama che si suicida con la sciabola del padre"],
-            ["Bose","la Miss Italia che divenne una star del cinema e sposo' un famoso torero"],
-            ["Bergamo","la provincia dove troviamo la casa di Arlecchino"],
-            ["Bauhaus","la scuola tedesca di design e architettura diretta da Walter Gropius"],
-            ["Bob","la slitta munita di volante con la quale si scende lungo piste ghiacciate"],
-            ["Bernadette","la Soubirous a cui la Vergine Maria apparve a Lourdes"],
-            ["Barbare","le 'Odi' del Carducci"],
-            ["Bronte","le sorelle che scrivevano sotto gli pseudonimi di Currer, Ellis e Acton Bell"],
-            ["Blue Jeans","li invento' Levi-Strauss"],
-            ["Boraciferi","lo sono i soffioni di Larderello"],
-            ["Baseball","lo sport americano che e' stato ammesso alle olimpiadi nel 1984"],
-            ["Bhutto","lo Zulfikar Ali' impiccato in Pakistan nel 1979"],
-            ["Bischero","parte di uno strumento a corde"],
-            ["brina","Rugiada congelata"],
-            ["Bolas","sono usate nelle pampas per catturare gli animali"],
-            ["Bonn","vi nacque Ludwig Van Beethoven"]            
+            ["Bianco","e' il colore del lutto nei paesi musulmani"],//cg
+            ["Bardotto","e' il risultato dell'incrocio tra un cavallo e un asina"],//cg
+            ["Brasile","e' la quinta nazione piu' grande del mondo"],//geo
+            ["Beretta","hanno cominciato vendendo archibugi alla Serenissima e finito col vendere pistole all'FBI"],//cg
+            ["Bridge","il campionato del mondo vinto dal 'blue team' italiano"],//sport
+            ["Bacco","il dio del vino per i romani"],//cg
+            ["bianca","il film in cui Moretti (brrr) dice 'Come si fa a dormire con una donna con cui si e' fatto l'amore?'"],//movie
+            ["Buridano","il filosofo al quale si associa un asino morto di fame perche' incerto tra due cibi"],//cg
+            ["Bordin","il Gelindo primo italiano a vincere una maratona olimpica"],//sport
+            ["Bettega","il giocatore di calcio italiano che ha militato a fine carriera nei Toronto Blizzards"],//sport
+            ["Badminton","il gioco con le racchette apparso in Inghilterra verso il 1860"],//sport
+            ["Beach Boys","il gruppo formato dai fratelli Wilson nel 1961"],//music
+            ["Baltico","il Mare che separa Riga da Stoccolma"],//geo
+            ["Bongiorno","il Mike che disse a una concorrente 'Ahi, ahi, signora Longari, mi e' caduta sull'uccello'"],//cg
+            ["Bongiorno","il Mike presentatore che fu condannato a morte per spionaggio nel 1944 da un tribunale militare tedesco"],//cg
+            ["Baracca","il pilota che aveva sull'aereo il cavallino rampante simbolo della Ferrari"],//sto
+            ["Barbarossa","il soprannome di Federico I imperatore germanico dal 1152 al 1190"],//sto
+            ["Bolscioi","il teatro del piu' famoso corpo di ballo di danza classica di Mosca"],//cg
+            ["Blueberry","il tenente disertore dell'esercito americano che e' un eroe dei fumetti"],//cg
+            ["Brandt","il Willy sindaco di Berlino Ovest che accolse J.F. Kennedy"],//sto
+            ["Bonsai","l'albero nano giapponese"],//cg
+            ["Baikal","Il lago più profondo al mondo"],//geo
+            ["Barbados","Di quale stato é capitale la cittá di Bridgetown"],//geo
+            ["Bolena","l'Anna madre di Elisabetta I di Inghilterra"],//sto
+            ["Bouquet","l'aroma di un vino"],//cg
+            ["Boito","l'Arrigo librettista di Giuseppe Verdi che scrisse la musica di un'opera"],//sto
+            ["Boy Scouts","l'associazione fondata dall'ufficiale britannico Robert Baden-Powell nel 1907"],//cg
+            ["Brando","l'attore che si rifiuto' di ritirare il secondo premio Oscar"],//movie
+            ["Bergman","l'attrice che ha debuttato nel 1938 con Intermezzo"],//movie
+            ["Bonaccorti","l'Enrica che divento' una star televisiva con la trasmissione Pronto, chi gioca?"],//cg
+            ["Bearzot","l'Enzo commissario tecnico della nazionale italiana vincitrice dei mondiali di calcio di spagna nel 1982"],//sport
+            ["Barletta","la 'Disfida' in cui gli italiani furono guidati da Ettore Fieramosca"],//sto
+            ["Baffi","la caratteristica facciale di Walt Disney che nessun altro collaboratore era autorizzato ad avere"],//cg
+            ["Brindisi","la citta' dalla quale Vittorio Emanuele III si imbarco' per lasciare definitivamente l'Italia"],//sto
+            ["Bruxelles","la citta' in cui fu organizzata l'esposizione universale del 1958"],//cg
+            ["Buenos Aires","la citta' in cui si trova la Casa Rosada"],//geo
+            ["Bouvier","la Jacqueline che ebbe J.F. Kennedy come primo marito"],//sto
+            ["Bronzo","la lega formata da rame e stagno"],//cg
+            ["Bosè","la Lucia protagonista del film di Maselli Gli sbandati"],//movie
+            ["Bianchina","la macchina di Fantozzi"],//movie
+            ["Butterfly","La Madama che si suicida con la sciabola del padre"],//cg
+            ["Bosè","la Miss Italia che divenne una star del cinema e sposo' un famoso torero"],//cg
+            ["Bergamo","la provincia dove troviamo la casa di Arlecchino"],//geo
+            ["Bauhaus","la scuola tedesca di design e architettura diretta da Walter Gropius"],//cg
+            ["Bob","la slitta munita di volante con la quale si scende lungo piste ghiacciate"],//sport
+            ["Bernadette","la Soubirous a cui la Vergine Maria apparve a Lourdes"],//cg
+            ["Barbare","le 'Odi' del Carducci"],//cg
+            ["Bronte","le sorelle che scrivevano sotto gli pseudonimi di Currer, Ellis e Acton Bell"],//cg
+            ["Blue Jeans","li invento' Levi-Strauss"],//cg
+            ["Boraciferi","lo sono i soffioni di Larderello"],//geo
+            ["Baseball","lo sport americano che e' stato ammesso alle olimpiadi nel 1984"],//sport
+            ["Bhutto","lo Zulfikar Ali' impiccato in Pakistan nel 1979"],//cg
+            ["Bischero","parte di uno strumento a corde"],//mosic
+            ["brina","Rugiada congelata"],//cg
+            ["Bolas","sono usate nelle pampas per catturare gli animali"],//cg
+            ["Bonn","vi nacque Ludwig Van Beethoven"]//music
     ],
     "c":[                
-            ["Copechi","100 formano un rublo"],
-            ["Caliga","calzatura degli antichi soldati romani"],
-            ["Carezza","celebre lago dolomitico che in tedesco si chiama Carersee"],
-            ["Cagliari","citta' sarda in cui si celebra la festa di Sant'Efisio"],
-            ["Caravaggio","cosi' era detto il pittore Michelangelo Merisi"],
-            ["Carlomagno","era figlio di Pipino il Breve"],
-            ["Corrado","era il conduttore della trasmissione radiofonica Rosso e nero"],
-            ["Citroen","fabbrico' la prima auto a trazione anteriore"],
-            ["Churchill","fu il Primo Ministro del regno di Elisabetta II di Inghilterra"],
-            ["Carlomagno","fu incoronato imperatore nella notte di Natale dell'800"],
-            ["Cleopatra","fu l'ultimo sovrano regnante della stirpe dei Tolomei"],
-            ["Cagliari","fu la prima squadra di calcio a sud di Roma a vincere lo scudetto"],
-            ["Cicerone","fu mortale avversario di Catilina"],
-            ["Cartaginesi","furono sconfitti da Caio Duilio a Milazzo nel 260 a.C."],
-            ["Cana","Gesu' vi compi' il miracolo della trasformazione dell'acqua in vino"],
-            ["Chopin","ha composto 50 mazurche, 19 valzer e 14 polacche"],
-            ["Cellini","ha scolpito la statua di Perseo che orna la loggia dei Lanzi a Firenze"],
-            ["Colombo","ha scoperto la Giamaica"],
-            ["Capillari","i piu' piccoli vasi sanguigni"],
-            ["Castel del Monte","il castello a pianta e torrioni ottagonali che Federico II ha lasciato in Puglia"],
-            ["Chaplin","il Charlie che ha realizzato L'opinione pubblica nel 1923"],
-            ["Chaplin","il Charlie che ha sposato Oona O'Neill"],
+            ["Copechi","100 formano un rublo"],//sto
+            ["Caliga","calzatura degli antichi soldati romani"],//sto
+            ["Carezza","celebre lago dolomitico che in tedesco si chiama Carersee"],//geo
+            ["Cagliari","citta' sarda in cui si celebra la festa di Sant'Efisio"],//geo
+            ["Caravaggio","cosi' era detto il pittore Michelangelo Merisi"],//cg
+            ["Carlomagno","era figlio di Pipino il Breve"],//sto
+            ["Corrado","era il conduttore della trasmissione radiofonica Rosso e nero"],//cg
+            ["Citroen","fabbrico' la prima auto a trazione anteriore"],//cg
+            ["Churchill","fu il Primo Ministro del regno di Elisabetta II di Inghilterra"],//sto
+            ["Carlomagno","fu incoronato imperatore nella notte di Natale dell'800"],//sto
+            ["Cleopatra","fu l'ultimo sovrano regnante della stirpe dei Tolomei"],//sto
+            ["Cagliari","fu la prima squadra di calcio a sud di Roma a vincere lo scudetto"],//sport
+            ["Cicerone","fu mortale avversario di Catilina"],//sto
+            ["Cartaginesi","furono sconfitti da Caio Duilio a Milazzo nel 260 a.C."],//sto
+            ["Cana","Gesu' vi compi' il miracolo della trasformazione dell'acqua in vino"],//cg
+            ["Chopin","ha composto 50 mazurche, 19 valzer e 14 polacche"],//misic
+            ["Cellini","ha scolpito la statua di Perseo che orna la loggia dei Lanzi a Firenze"],//cg
+            ["Colombo","ha scoperto la Giamaica"],//geo
+            ["Capillari","i piu' piccoli vasi sanguigni"],//cg
+            ["Cinque","Il numero di stelle della bandiera dell'Honduras"],//geo
+            ["Castel del Monte","il castello a pianta e torrioni ottagonali che Federico II ha lasciato in Puglia"],//cg
+            ["Chaplin","il Charlie che ha realizzato L'opinione pubblica nel 1923"],//movie
+            ["Chaplin","il Charlie che ha sposato Oona O'Neill"],//movie
             ["Cervi","il Gino che e' stato Ettore Fieramosca e Peppone"],
             ["Cervi","il Gino che interpretava Maigret"],
             ["Cousteau","il Jacques che esplorava le profondita' marine"],
@@ -515,6 +516,7 @@ var qa = {
         ["Ob","fiume russo che scorre in Siberia e si getta nel mar di Kara"],
         ["Ottano","idrocarburo che presenta 8 atomi di Carbonio"],
         ["Owens","il Jesse pantera nera dell'atletica"],
+        ["Oscar Wilde","L'autore de 'Il ritratto di Dorian Gray'"],
         ["Ornitorinco","il mammifero che ha zampe palmate e unghiute e depone le uova"],
         ["Orleans","la battaglia nella quale Giovanna D'Arco comando' le truppe francesi"],
         ["Oslo","la citta' nella quale si puo' ammirare il Kon-Tiki"],
@@ -644,6 +646,7 @@ var qa = {
         ["Savoia","furono proprietari della Sacra Sindone fino al 1983"],
         ["Serpenti","gli animali che danno il nome alla caratteristica processione di Cocullo"],
         ["Salomone","gli rese visita la Regina di Saba"],
+        ["Spagna","Nazionalita' del famoso piatto 'paella'"],
         ["Shaw","il Bernard che disse 'La sigaretta e' un rotolino di carta con ad un'estremita' un fuoco e all'altra uno sciocco'"],
         ["Sonni","Chi è onesto, li dorme tranquilli.."],
         ["Springsteen","il Bruce detto The boss"],
