@@ -147,55 +147,53 @@ var qa = {
             ["Castel del Monte","il castello a pianta e torrioni ottagonali che Federico II ha lasciato in Puglia"],//cg
             ["Chaplin","il Charlie che ha realizzato L'opinione pubblica nel 1923"],//movie
             ["Chaplin","il Charlie che ha sposato Oona O'Neill"],//movie
-            ["Cervi","il Gino che e' stato Ettore Fieramosca e Peppone"],
-            ["Cervi","il Gino che interpretava Maigret"],
-            ["Cousteau","il Jacques che esplorava le profondita' marine"],
-            ["Clark","il Jim corridore soprannominato lo scozzese volante"],
-            ["Chagall","il Marc che ha dipinto il soffitto dell'Opera di Parigi"],
-            ["Calderone","il nome del ghiacciaio del Gran Sasso, unico di tutti gli appennini"],
-            ["Canada","il paese che ha l'hockey su ghiaccio come sport nazionale"],
-            ["Cina","il paese del panda gigante"],
-            ["Cecoslovacchia","il paese invaso dalle truppe sovietiche nel 1968"],
-            ["Chigi","il palazzo dove ha l'ufficio il primo ministro italiano"],
-            ["Corriere della Sera","il quotidiano che ha sede in V. Solferino a Milano"],
-            ["Casanova","il seduttore per antonomasia"],
-            ["Carlo V","il sovrano sul cui impero il sole non tramontava mai"],
-            ["Capitale","il suo primo volume e' 'Sviluppo della produzione capitalista'"],
-            ["Cornamusa","il tipico strumento musicale degli scozzesi"],
-            ["Ceylon","il vecchio nome dello Sri Lanka"],
-            ["Cianidrico","l'acido che e' detto anche prussico"],
-            ["Circo","l'ammaestratore di pulci ne e' il mestiere piu' faticoso per gli occhi"],
-            ["Cammello","l'animale che forni' aiuto decisivo nelle campagne di Lawrence d'Arabia"],
-            ["Coccodrillo","l'animale che si dice abbia rimorsi"],
-            ["Cicala","l'animale che si esprime con 7.400 pulsazioni al minuto"],
-            ["Che Guevara","l'Ernesto il cui cadavere fu esposto (brrr) dall'esercito boliviano nel 1967"],
-            ["caracalla","l'imperatore che fece costruire a Roma il piu' famoso stabilimento termale"],
-            ["Canossa","l'imperatore Enrico IV vi imploro' il perdono di Papa Gregorio VII"],
-            ["Capri","l'imperatore Tiberio vi passava abitualmente le vacanze"],
-            ["Cuba","l'isola piu' grande delle Antille"],
-            ["Clouseau","l'ispettore interpretato da Peter Sellers"],
-            ["Cicerone","l'oratore che svento' la congiura di Catilina"],
-            ["Connor","La Sarah che Terminator deve eliminare nel primo film della saga omonima"],
-            ["Croce Rossa","l'organizzazione internazionale che ha vinto il solo premio Nobel assegnato durante la Prima Guerra Mondiale"],
-            ["Cime tempestose","l'unico romanzo di Emily Bronte"],
-            ["Chamberlain","l'uomo politico inglese che firmo' il patto di Monaco"],
-            ["Calva","la 'cantatrice' di Ionesco"],
-            ["Coca Cola","la bevanda alla quale corrisponde la formula segreta 7x"],
-            ["Catania","la citta' con l'aeroporto Fontana Rossa"],
-            ["Cnosso","la citta' cretese scoperta da Sir Arthur Evans"],
-            ["Chaplin","La contessa di Honk Kong e' stato il suo ultimo film"],
-            ["Athletics","la Gigliola che nel 1964 cantava Non ho l'eta'"],
-            ["Cinquetti","la Gigliola che nel 1964 cantava Non ho l'eta'"],
-            ["Chatterley","la Lady che fu l'amante del giardiniere"],
-            ["Carie","la malattia non contagiosa piu' comune al mondo"],
-            ["Curie","la Marie che ha vinto due premi Nobel"],
-            ["Calipso","la ninfa che trattenne Ulisse per 10 anni"],
-            ["Cartagine","la potenza nemica di Roma che disponeva di 5.000 navi"],
-            ["Curie","la prima donna a vincere un premio Nobel"],
-            ["Castelgandolfo","la residenza estiva del papa"],
-            ["Chiara","la Santa protettrice di chi lavora in televisione"],
-            ["Cosmos","la squadra statunitense in cui a fine carriera milito' Giorgio Chinaglia"],
-            ["Continenti","li rappresentano i cinque cerchi olimpici"],
+            ["Cervi","il Gino che e' stato Ettore Fieramosca e Peppone"],//movie
+            ["Cervi","il Gino che interpretava Maigret"],//movie
+            ["Cousteau","il Jacques che esplorava le profondita' marine"],//cg
+            ["Clark","il Jim corridore soprannominato lo scozzese volante"],//sport
+            ["Chagall","il Marc che ha dipinto il soffitto dell'Opera di Parigi"],//cg
+            ["Calderone","il nome del ghiacciaio del Gran Sasso, unico di tutti gli appennini"],//geo
+            ["Canada","il paese che ha l'hockey su ghiaccio come sport nazionale"],//sport
+            ["Cina","il paese del panda gigante"],//geo
+            ["Cecoslovacchia","il paese invaso dalle truppe sovietiche nel 1968"],//sto
+            ["Chigi","il palazzo dove ha l'ufficio il primo ministro italiano"],//cg
+            ["Corriere della Sera","il quotidiano che ha sede in V. Solferino a Milano"],//cg
+            ["Casanova","il seduttore per antonomasia"],//cg
+            ["Carlo V","il sovrano sul cui impero il sole non tramontava mai"],//sto
+            ["Capitale","il suo primo volume e' 'Sviluppo della produzione capitalista'"],//cg
+            ["Cornamusa","il tipico strumento musicale degli scozzesi"],//cg
+            ["Ceylon","il vecchio nome dello Sri Lanka"],//geo
+            ["Cianidrico","l'acido che e' detto anche prussico"],//cg            
+            ["Cammello","l'animale che forni' aiuto decisivo nelle campagne di Lawrence d'Arabia"],//cg
+            ["Coccodrillo","l'animale che si dice abbia rimorsi"],//cg
+            ["Cicala","l'animale che si esprime con 7.400 pulsazioni al minuto"],//sci
+            ["Che Guevara","l'Ernesto il cui cadavere fu esposto (brrr) dall'esercito boliviano nel 1967"],//sto
+            ["caracalla","l'imperatore che fece costruire a Roma il piu' famoso stabilimento termale"],//sto
+            ["Canossa","l'imperatore Enrico IV vi imploro' il perdono di Papa Gregorio VII"],//sto
+            ["Capri","l'imperatore Tiberio vi passava abitualmente le vacanze"],//cg
+            ["Cuba","l'isola piu' grande delle Antille"],//geo
+            ["Clouseau","l'ispettore interpretato da Peter Sellers"],//movie
+            ["Cicerone","l'oratore che svento' la congiura di Catilina"],//sto
+            ["Connor","La Sarah che Terminator deve eliminare nel primo film della saga omonima"],//movie
+            ["Croce Rossa","l'organizzazione internazionale che ha vinto il solo premio Nobel assegnato durante la Prima Guerra Mondiale"],//cg
+            ["Cime tempestose","l'unico romanzo di Emily Bronte"],//movie
+            ["Chamberlain","l'uomo politico inglese che firmo' il patto di Monaco"],//sto
+            ["Calva","la 'cantatrice' di Ionesco"],//cg
+            ["Coca Cola","la bevanda alla quale corrisponde la formula segreta 7x"],//cg
+            ["Catania","la citta' con l'aeroporto Fontana Rossa"],//cg
+            ["Cnosso","la citta' cretese scoperta da Sir Arthur Evans"],//sto
+            ["Chaplin","La contessa di Honk Kong e' stato il suo ultimo film"],//movie           
+            ["Cinquetti","la Gigliola che nel 1964 cantava Non ho l'eta'"],//cg
+            ["Chatterley","la Lady che fu l'amante del giardiniere"],//cg
+            ["Carie","la curano i dentisti"],//cg
+            ["Curie","la Marie che ha vinto due premi Nobel"],//sto
+            ["Calipso","la ninfa che trattenne Ulisse per 10 anni"],//cg
+            ["Cartagine","la potenza nemica di Roma che disponeva di 5.000 navi"],//sto
+            ["Curie","la prima donna a vincere un premio Nobel"],//sto
+            ["Castelgandolfo","la residenza estiva del papa"],//cg
+            ["Chiara","la Santa protettrice di chi lavora in televisione"],//cg
+            ["Cosmos","la squadra statunitense in cui a fine carriera milito' Giorgio Chinaglia"],//sport
+            ["Continenti","li rappresentano i cinque cerchi olimpici"],//sport
             ["Comune","lo e' la 'gente' per Robert Redford"],
             ["Cricket","lo sport dal quale deriva il baseball"],
             ["Calcio","lo sport piu' praticato al mondo"],
