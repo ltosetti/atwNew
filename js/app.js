@@ -297,16 +297,31 @@ Views.prototype.circularShow = function(){
         this.angle += this.step; 
     }
     
-    document.getElementById("btn").onclick = function(){
-        this.angle = -2;
+    document.getElementById("btn").onclick = function(){   
+        //var l = (0.3)*delta;
+        //this.angle = (this.angle - l);
         for (var i=0;this.fields.length > i; i++){
+            var active = this.fields[i].getAttribute("data-active");
+            if (active == "true"){
+                console.log(this.fields[i]);
+                var delta = parseInt(this.fields[i].id.replace("q",""));
+                console.log(delta);
+            }
+        }
+        this.angle = 4.7;
+        var l = (0.3)*delta;
+        this.angle = (this.angle - l);
+        for (var i=0;this.fields.length > i; i++){           
+            //this.angle = (this.angle - (0.3*delta));
             var x = Math.round(this.width/2 + this.radius * Math.cos(this.angle) - this.fields[i].offsetWidth/2);   
             var y = Math.round(this.height/2 + this.radius * Math.sin(this.angle) - this.fields[i].offsetHeight/2);
             if(window.console) {
-                console.log(x, y);
+                //console.log(x, y);
             }
-            this.fields[i].style.left=x+"px";
-            this.fields[i].style.top=y+"px";                
+            //this.tl.to(this.fields[i],0.2,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+            TweenMax.to(this.fields[i],0.12,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+            //this.fields[i].style.left=x+"px";
+            //this.fields[i].style.top=y+"px";                
             this.angle += this.step; 
         } 
     }.bind(this);
