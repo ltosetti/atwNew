@@ -71,6 +71,8 @@ function GamePlay(el,gs){
     //this.interaction(gs);
     this.interaction2(gs);
     this.keyListener(gs);
+    this.view = new Views("qWrap",".itemQ");
+    //this.view.circularShow();
 };
 GamePlay.prototype.interaction2 = function(gs){
     //start new game settings 
@@ -113,7 +115,7 @@ GamePlay.prototype.interaction2 = function(gs){
             console.log("gioco finito");
         }*/
     }           
-    console.log(this.gamedataArray);
+    console.log(this.gamedataArray);    
 };       
 GamePlay.prototype.checkAnswer = function(gs){
     if (this.gamedataArray[3] != undefined){  
@@ -139,14 +141,18 @@ GamePlay.prototype.checkAnswer = function(gs){
         } else if (this.input.value.toLowerCase() == "")  {
            this.passed();
         }
-    } 
+    }    
     if (this.gamedataArray[0] == (this.letterArray.length-1)){ 
         this.firstPlayComplete = true;
         console.log("giro finito");
         this.checkNotAnswered(gs);
         this.finish(gs);                
     }
-    this.input.value = "";
+    this.input.value = ""; 
+    setTimeout(function(){
+        this.view.wheeling();
+    }.bind(this),500);
+    
 };
 GamePlay.prototype.passed = function(gs){
     console.log("passaparola");
@@ -271,7 +277,7 @@ CircularCntdwn.prototype.formatSeconds = function(secs) {
     return pad(m) + ":" + pad(s);
 };
 
-var a = new GameSettings(qa);
+
 
 //circle placement
 function Views(container, items){
@@ -326,4 +332,34 @@ Views.prototype.circularShow = function(){
         } 
     }.bind(this);
 };
-var circle = new Views("qWrap",".itemQ");
+Views.prototype.wheeling = function(){    
+        //var l = (0.3)*delta;
+        //this.angle = (this.angle - l);
+        for (var i=0;this.fields.length > i; i++){
+            var active = this.fields[i].getAttribute("data-active");
+            if (active == "true"){
+                console.log(this.fields[i]);
+                var delta = parseInt(this.fields[i].id.replace("q",""));
+                console.log(delta);
+            }
+        }
+        this.angle = 4.7;
+        var l = (0.3)*delta;
+        this.angle = (this.angle - l);
+        for (var i=0;this.fields.length > i; i++){           
+            //this.angle = (this.angle - (0.3*delta));
+            var x = Math.round(this.width/2 + this.radius * Math.cos(this.angle) - this.fields[i].offsetWidth/2);   
+            var y = Math.round(this.height/2 + this.radius * Math.sin(this.angle) - this.fields[i].offsetHeight/2);
+            if(window.console) {
+                //console.log(x, y);
+            }
+            //this.tl.to(this.fields[i],0.2,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+            TweenMax.to(this.fields[i],0.12,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+            //this.fields[i].style.left=x+"px";
+            //this.fields[i].style.top=y+"px";                
+            this.angle += this.step; 
+        } 
+    
+}
+var a = new GameSettings(qa);
+//var circle = new Views("qWrap",".itemQ");
