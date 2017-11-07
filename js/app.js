@@ -277,8 +277,6 @@ CircularCntdwn.prototype.formatSeconds = function(secs) {
     return pad(m) + ":" + pad(s);
 };
 
-
-
 //circle placement
 function Views(container, items){
     this.radius = 150;
