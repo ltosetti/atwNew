@@ -237,10 +237,13 @@ GamePlay.prototype.timeout = function(gs){
 function CircularCntdwn(gs){            
     this.time = 120;           
     this.svg = document.querySelector('.circle_animation');
+    //this.svg.style.strokeDasharray = ((Views.ratioW.dimensions[0]*3.14)) //"1337";
+    //this.svg.style.strokeDashoffset = "1337";
     this.timeMin = document.querySelector('h2 span#min');
     this.timeSec = document.querySelector('h2 span#sec');
     this.timeField = document.querySelector('h2');            
-    this.initialOffset = '785'//'440';
+    this.initialOffset = (this.svg.getAttribute("r")*2)*3.14;//'785'//'440';
+    console.log(this.svg.getAttribute("r"))
     this.stop = false;
     i = 1
     this.interval = setInterval(function() {                
@@ -279,7 +282,13 @@ CircularCntdwn.prototype.formatSeconds = function(secs) {
 
 //circle placement
 function Views(container, items){
-    this.radius = 150;
+    this.ratioW;
+    this.svg = document.querySelector("svg");
+    this.circle = document.querySelector("circle");
+    this.parent = document.querySelectorAll("body")[0];
+    this.wWrapper = document.getElementById("wrapper");
+    this.setSize();
+    this.radius = this.wWrapper.offsetWidth/2;//150;
     this.fields = document.querySelectorAll(items);
     this.container = document.getElementById(container);
     this.width = this.container.offsetWidth;
@@ -289,6 +298,31 @@ function Views(container, items){
     this.tl = new TimelineMax();
     console.log(this.tl);
     this.circularShow();    
+};
+Views.prototype.setSize = function(){
+    var d = this.parent;
+    var e = this.wWrapper;    
+    this.ratioW = new TosnelloObj(d,e, {   
+        contentMaxWidth : window.innerWidth,// document.querySelectorAll("body")[0].offsetWidth-50,
+        contentMaxHeight : window.innerHeight,//document.querySelectorAll("body")[0].offsetHeight-50,
+        contentRatio: 1/1,
+        top: 0.05,
+        bottom: 0.05,
+        left:0,
+        right:0,
+        margin:"auto"
+    });   
+    this.ratioW.init();
+    this.svg.setAttribute("width", this.ratioW.dimensions[0]);
+    this.svg.setAttribute("height", this.ratioW.dimensions[1]);
+    this.svg.style.width = this.ratioW.dimensions[0]+"px";
+    this.svg.style.height = this.ratioW.dimensions[1]+"px";
+    this.circle.setAttribute("r",(this.ratioW.dimensions[0]/2)-30);
+    this.circle.setAttribute("cy",(this.ratioW.dimensions[0]/2));
+    this.circle.setAttribute("cx",(this.ratioW.dimensions[0]/2));
+    this.svg.style.strokeDasharray = (this.circle.getAttribute("r")*2)*3.14; //"1337";
+    this.svg.style.strokeDashoffset = (this.circle.getAttribute("r")*2)*3.14;
+    
 };
 Views.prototype.circularShow = function(){
     TweenMax.set(".itemQ",{autoAlpha:0});
@@ -331,33 +365,140 @@ Views.prototype.circularShow = function(){
     }.bind(this);
 };
 Views.prototype.wheeling = function(){    
-        //var l = (0.3)*delta;
-        //this.angle = (this.angle - l);
-        for (var i=0;this.fields.length > i; i++){
-            var active = this.fields[i].getAttribute("data-active");
-            if (active == "true"){
-                console.log(this.fields[i]);
-                var delta = parseInt(this.fields[i].id.replace("q",""));
-                console.log(delta);
-            }
+    //var l = (0.3)*delta;
+    //this.angle = (this.angle - l);
+    for (var i=0;this.fields.length > i; i++){
+        var active = this.fields[i].getAttribute("data-active");
+        if (active == "true"){
+            console.log(this.fields[i]);
+            var delta = parseInt(this.fields[i].id.replace("q",""));
+            console.log(delta);
         }
-        this.angle = 4.7;
-        var l = (0.3)*delta;
-        this.angle = (this.angle - l);
-        for (var i=0;this.fields.length > i; i++){           
-            //this.angle = (this.angle - (0.3*delta));
-            var x = Math.round(this.width/2 + this.radius * Math.cos(this.angle) - this.fields[i].offsetWidth/2);   
-            var y = Math.round(this.height/2 + this.radius * Math.sin(this.angle) - this.fields[i].offsetHeight/2);
-            if(window.console) {
-                //console.log(x, y);
-            }
-            //this.tl.to(this.fields[i],0.2,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
-            TweenMax.to(this.fields[i],0.12,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
-            //this.fields[i].style.left=x+"px";
-            //this.fields[i].style.top=y+"px";                
-            this.angle += this.step; 
-        } 
-    
-}
+    }
+    this.angle = 4.7;
+    var l = (0.3)*delta;
+    this.angle = (this.angle - l);
+    for (var i=0;this.fields.length > i; i++){           
+        //this.angle = (this.angle - (0.3*delta));
+        var x = Math.round(this.width/2 + this.radius * Math.cos(this.angle) - this.fields[i].offsetWidth/2);   
+        var y = Math.round(this.height/2 + this.radius * Math.sin(this.angle) - this.fields[i].offsetHeight/2);
+        if(window.console) {
+            //console.log(x, y);
+        }
+        //this.tl.to(this.fields[i],0.2,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+        TweenMax.to(this.fields[i],0.12,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+        //this.fields[i].style.left=x+"px";
+        //this.fields[i].style.top=y+"px";                
+        this.angle += this.step; 
+    }
+};
+
+/*
+=================================================================================================================
+TOSNELLO 2.0.1
+authors: Nello Staibano, Luca Tosetti
+last update: 2016/08/05
+=================================================================================================================
+*/
+function TosnelloObj(parent, children, objSet){    
+    this.wrapper = parent instanceof String?document.querySelector(parent):parent;
+    this.content = children instanceof String?document.querySelector(children):children;
+
+    this.objSet = (objSet === "undefined") ? null : objSet;
+    if (this.objSet != null){    
+        this.contentRatio = (this.objSet.contentRatio === undefined || isNaN(this.objSet.contentRatio)) ? 16/9 : this.objSet.contentRatio;        
+        this.top = (this.objSet.top === undefined)? 0 : this.objSet.top;
+        this.bottom = (this.objSet.bottom === undefined)? 0 : this.objSet.bottom;
+        this.left = (this.objSet.left === undefined)? 0 : this.objSet.left;
+        this.right = (this.objSet.right === undefined)? 0 : this.objSet.right;
+        this.bottomBarFixedHeight = (this.objSet.bottomBarFixedHeight === undefined)? 0 : this.objSet.bottomBarFixedHeight;
+        this.sideBarPercWidth = (this.objSet.sideBarPercWidth === undefined)? 0 : this.objSet.sideBarPercWidth;
+        this.contentMaxWidth = (this.objSet.contentMaxWidth === undefined)? 1920 : this.objSet.contentMaxWidth;
+        this.contentMaxHeight = (this.objSet.contentMaxHeight === undefined)? 1080 : this.objSet.contentMaxHeight;
+        this.contentMinWidth = (this.objSet.contentMinWidth === undefined)? 20 : this.objSet.contentMinWidth;
+        this.contentMinHeight = (this.objSet.contentMinWidth === undefined)? 20 : this.objSet.contentMinHeight;
+        this.margin = (this.objSet.margin === undefined) ? "auto" : this.objSet.margin;
+    } else {
+        this.contentRatio = 16/9; //c;
+        this.top = 0;//d;
+        this.bottom = 0;//e;
+        this.left = 0;//f;
+        this.right = 0;//g;       
+        this.bottomBarFixedHeight = 0;//h;    
+        this.sideBarPercWidth = 0;//i;
+        this.contentMaxWidth = 1920;
+        this.contentMaxHeight = 1080;
+        this.contentMinWidth = 20;
+        this.contentMinHeight = 20;
+        this.margin = "auto";
+
+    }
+
+    this.contentWidth;
+    this.contentHeight;
+
+    this.dimensions = [];
+    this.reducePercentageH;
+    this.reducePercentageW;
+    this.reducePercentage;    
+};
+TosnelloObj.prototype.ratio = function(){
+
+    this.containerWidth = this.wrapper.offsetWidth;
+    this.containerHeight = this.wrapper.offsetHeight;  
+    //this.containerHeight = (window.innerHeight < this.wrapper.offsetHeight)?window.innerHeight:this.wrapper.offsetHeight;  
+
+    var totalHeightDelta = this.top + this.bottom;    
+    var totalWidthDelta = this.left + this.right;  
+    var containerAvailableHeight = this.containerHeight * (1 - totalHeightDelta);  
+    var containerAvailableWidth = this.containerWidth * (1 - totalWidthDelta);  
+    if (containerAvailableHeight > this.contentMaxHeight) {
+        containerAvailableHeight = this.contentMaxHeight;
+    } else if (containerAvailableHeight < this.contentMinHeight) {
+        containerAvailableHeight = this.contentMinHeight;
+    }
+    if (containerAvailableWidth > this.contentMaxWidth) {
+        containerAvailableWidth = this.contentMaxWidth;
+    } else if (containerAvailableWidth < this.contentMinWidth) {
+        containerAvailableWidth = this.contentMinWidth;
+    }
+    if (containerAvailableWidth > containerAvailableHeight) {
+        this.contentHeight = containerAvailableHeight;
+        this.contentWidth = (this.contentHeight * this.contentRatio);
+        if (this.contentWidth >= containerAvailableWidth) {
+            this.contentWidth = containerAvailableWidth;
+            this.contentHeight = (this.contentWidth / this.contentRatio);
+        }
+    } else {
+        this.contentWidth = containerAvailableWidth;
+        this.contentHeight = (this.contentWidth / this.contentRatio);
+        if (this.contentHeight >= containerAvailableHeight) {
+            this.contentHeight = containerAvailableHeight;
+            this.contentWidth = (this.contentHeight * this.contentRatio);
+        }
+    }
+    this.reducePercentageH = 1 - (this.bottomBarFixedHeight / this.contentHeight);
+    this.reducePercentageW = 1 / (1 + this.sideBarPercWidth);
+    this.reducePercentage = Math.min(this.reducePercentageH, this.reducePercentageW);    
+    this.dimensions[0] = this.contentWidth * this.reducePercentage;
+    this.dimensions[1] = this.contentHeight * this.reducePercentage;   
+    return this.dimensions;
+};
+TosnelloObj.prototype.setContentRatio = function(position){ 
+    this.ratio();    
+    this.content.style.position = "absolute";
+    this.content.style.width = this.dimensions[0]  +"px";
+    this.content.style.height = this.dimensions[1] + "px";
+    this.content.style.top = isNaN(this.top)?"auto":this.top * 100 + "%";    
+    this.content.style.bottom = isNaN(this.bottom)?"auto":this.bottom * 100 + "%"; 
+    this.content.style.left = isNaN(this.left)?"auto":this.left * 100 + "%";    
+    this.content.style.right = isNaN(this.right)?"auto":this.right * 100 + "%";             
+    this.content.style.margin = this.margin;
+};
+TosnelloObj.prototype.init = function(position){
+    this.setContentRatio(position);    
+    //window.addEventListener("resize", this.setContentRatio.bind(this));    
+};
+
 var a = new GameSettings(qa);
 //var circle = new Views("qWrap",".itemQ");
