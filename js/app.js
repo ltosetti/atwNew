@@ -117,7 +117,7 @@ GamePlay.prototype.interaction2 = function(gs){
             console.log("gioco finito");
         }*/
     }           
-    console.log(this.gamedataArray);    
+    //console.log(this.gamedataArray);    
 };       
 GamePlay.prototype.checkAnswer = function(gs){
     if (this.gamedataArray[3] != undefined){  
@@ -302,7 +302,7 @@ function Views(container, items){
     this.angle = 4.7;
     this.step = (2*Math.PI) / this.fields.length;
     this.tl = new TimelineMax();
-    console.log(this.tl);
+    //console.log(this.tl);
     this.circularShow();    
 };
 Views.prototype.setSize = function(){
@@ -378,7 +378,7 @@ Views.prototype.wheeling = function(){
     for (var i=0;this.fields.length > i; i++){
         var active = this.fields[i].getAttribute("data-active");
         if (active == "true"){
-            console.log(this.fields[i]);
+            //console.log(this.fields[i]);
             var delta = parseInt(this.fields[i].id.replace("q",""));
             console.log(delta);
         }
