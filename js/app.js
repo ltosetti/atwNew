@@ -72,6 +72,8 @@ function GamePlay(el,gs){
     this.interaction2(gs);
     this.keyListener(gs);
     this.view = new Views("qWrap",".itemQ");
+    this.rightA = 0;
+    this.wrongA = 0;
     //this.view.circularShow();
 };
 GamePlay.prototype.interaction2 = function(gs){
@@ -122,6 +124,8 @@ GamePlay.prototype.checkAnswer = function(gs){
         console.log(this.letterArray.length);
         if (this.input.value.toLowerCase() == this.gamedataArray[3].toLowerCase() && this.input.value.toLowerCase() != ""){  
             console.log("giustoooo!!!");
+            document.getElementById("right").innerHTML = "Giuste: "+(this.rightA + 1);
+            this.wrongA = this.rightA + 1;
             this.gamedataArray[1].setAttribute("data-active","false");
             this.gamedataArray[1].setAttribute("data-answered","true");
             this.gamedataArray[1].setAttribute("data-correct","true");
@@ -131,6 +135,8 @@ GamePlay.prototype.checkAnswer = function(gs){
             //this.gamedataArray[1].style.background = "green";
         } else if (this.input.value.toLowerCase() != this.gamedataArray[3].toLowerCase() && this.input.value.toLowerCase() != "")  {
             console.log("sbagliatoooo!!!");
+            document.getElementById("wrong").innerHTML = "Sbagliate: " + (this.wrongA + 1);
+            this.wrongA = this.wrongA + 1;
             this.gamedataArray[1].setAttribute("data-active","false");
             this.gamedataArray[1].setAttribute("data-answered","true");
             this.gamedataArray[1].setAttribute("data-correct","false");
@@ -317,9 +323,11 @@ Views.prototype.setSize = function(){
     this.svg.setAttribute("height", this.ratioW.dimensions[1]);
     this.svg.style.width = this.ratioW.dimensions[0]+"px";
     this.svg.style.height = this.ratioW.dimensions[1]+"px";
-    this.circle.setAttribute("r",(this.ratioW.dimensions[0]/2)-30);
+    this.circle.setAttribute("r",(this.ratioW.dimensions[0]/2)-76);
     this.circle.setAttribute("cy",(this.ratioW.dimensions[0]/2));
     this.circle.setAttribute("cx",(this.ratioW.dimensions[0]/2));
+    this.circle.style.strokeWidth = 80//this.circle.getAttribute("cy");
+    this.svg.style.zIndex = -1;
     this.svg.style.strokeDasharray = (this.circle.getAttribute("r")*2)*3.14; //"1337";
     this.svg.style.strokeDashoffset = (this.circle.getAttribute("r")*2)*3.14;
     

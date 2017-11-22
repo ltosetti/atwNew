@@ -47,7 +47,7 @@ svg {
 #qWrap {
     width: 100%; 
     height: 100%; 
-    border: 1px solid #000; 
+    /*border: 1px solid #000; */
     position: relative; 
 }
 #center { 
@@ -59,11 +59,14 @@ svg {
     background: #000; 
     }
 .itemQ { 
+    /*
     width: 20px; 
-    height: 20px; 
-    position: absolute; 
-    border:1px solid #999; 
+    height: 20px;
     line-height: 20px; 
+    */
+    width: 50px; height:50px; line-height: 50px; font-size: 35px;
+    position: absolute; 
+    border:1px solid #999;   
     font-family: sans-serif; 
     color:#999;
     transition: transform 0.2s ease-in-out;
@@ -148,13 +151,15 @@ svg {
             <input id="answer" data-current="q0" type="text" style="position:absolute;top:20%; left:10%; z-index:10;" />       
             <h2>
                 <span id="min"></span>
-            </h2>             
+            </h2>           
             <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
                 <g>              
                     <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="none"/>
                 </g>
             </svg>
         </div>
+        <div id="right" style="width:100px; height:20px;">0</div>
+        <div id="wrong" style="width:100px; height:20px;">0</div>
         <button id="btn">btn</button>
     </body>
     <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
