@@ -2,7 +2,7 @@
 <head>
 <style>
     html,body {
-        width: 100%; height:100%; margin:0; padding:0;
+        width: 100%; height:100%; margin:0; padding:0; font-family: sans-serif;
     }
 /*---  countdown Circular ---*/
 .item {
@@ -114,6 +114,26 @@ svg {
     border:1px solid #fff; 
     color:#fff;
 }
+h2#ppTimer {
+    position: absolute;
+    top:1%; right:2%;
+    font-size: 34px;
+}
+#question {
+    position:absolute;
+    left:0;right:0; margin: auto; text-align: center;
+    font-size: 30px;
+    }
+    #answer {
+    width:60%;
+    height: 5%;
+    padding:5%;
+    font-size: 30px;
+    position:absolute;left:0;right:0; margin:auto; z-index:10;    
+    border-radius:15px;
+    border:1px solid #999;
+    }
+    * {outline: none;}
 </style>
 </head>
     <body>
@@ -147,12 +167,12 @@ svg {
                 <li id="q19" class="v itemQ">V</li>
                 <li id="q20" class="z itemQ">Z</li>
             </ul>
-            <div id="question" data-current="q0" style="position:absolute;top:10%; left:10%;"></div>
+            <div id="question" data-current="q0" style=""></div>
             <br />
-            <input id="answer" data-current="q0" type="text" style="position:absolute;top:20%; left:10%; z-index:10;" />       
-            <h2>
+            <input id="answer" data-current="q0" type="text" />       
+            <!--<h2>
                 <span id="min"></span>
-            </h2>           
+            </h2>-->
             <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
                 <g>              
                     <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="none"/>
@@ -161,6 +181,7 @@ svg {
         </div>
         <div id="right" style="width:100px; height:20px;">Giuste: 0</div>
         <div id="wrong" style="width:100px; height:20px;">Sbagliate: 0</div>
+        <h2 id="ppTimer"><span id="min"></span></h2>  
         <button id="btn">btn</button>
     </body>
     <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
