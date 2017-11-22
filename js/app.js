@@ -242,7 +242,7 @@ GamePlay.prototype.timeout = function(gs){
 
 function CircularCntdwn(gs){            
     this.time = 120;           
-    this.svg = document.querySelector('.circle_animation');
+    this.svg = document.querySelector('.circle_animation');    
     //this.svg.style.strokeDasharray = ((Views.ratioW.dimensions[0]*3.14)) //"1337";
     //this.svg.style.strokeDashoffset = "1337";
     this.timeMin = document.querySelector('h2 span#min');
@@ -253,7 +253,10 @@ function CircularCntdwn(gs){
     this.stop = false;
     i = 1
     this.interval = setInterval(function() {                
-        this.svg.style.strokeDashoffset = this.initialOffset-(i*(this.initialOffset/this.time));                     
+        this.svg.style.strokeDashoffset = this.initialOffset-(i*(this.initialOffset/this.time));  
+        setTimeout(function(){
+            this.svg.parentNode.parentNode.style.opacity = 1;
+        }.bind(this),500);        
         this.timeMin.innerHTML = this.formatSeconds(this.time-i);                  
         if (i >= (this.time / 2)*1 && i <= ((this.time / 2)*1)+2) { 
             this.svg.style.stroke = "#ffd000";
@@ -272,7 +275,6 @@ function CircularCntdwn(gs){
                 //this.stop = true;
                 gs.gp.timeout(gs);
             },1000);
-
         }
         i++;  
     }.bind(this), 1000);            
