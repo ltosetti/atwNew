@@ -129,7 +129,7 @@ GamePlay.prototype.checkAnswer = function(gs){
         console.log(this.letterArray.length);
         if (this.input.value.toLowerCase() == this.gamedataArray[3].toLowerCase() && this.input.value.toLowerCase() != ""){  
             console.log("giustoooo!!!");
-            document.getElementById("right").innerHTML = "Giuste: "+(this.rightA + 1);
+            document.getElementById("right").innerHTML = (this.rightA + 1);
             this.rightA = this.rightA + 1;
             this.gamedataArray[1].setAttribute("data-active","false");
             this.gamedataArray[1].setAttribute("data-answered","true");
@@ -140,7 +140,7 @@ GamePlay.prototype.checkAnswer = function(gs){
             //this.gamedataArray[1].style.background = "green";
         } else if (this.input.value.toLowerCase() != this.gamedataArray[3].toLowerCase() && this.input.value.toLowerCase() != "")  {
             console.log("sbagliatoooo!!!");
-            document.getElementById("wrong").innerHTML = "Sbagliate: " + (this.wrongA + 1);
+            document.getElementById("wrong").innerHTML = (this.wrongA + 1);
             this.wrongA = this.wrongA + 1;
             this.gamedataArray[1].setAttribute("data-active","false");
             this.gamedataArray[1].setAttribute("data-answered","true");

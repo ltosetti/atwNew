@@ -120,12 +120,14 @@ h2#ppTimer {
     top:1%; right:2%;
     font-size: 34px;
 }
+
+
 #question {
     position:absolute;
     left:0;right:0; margin: auto; text-align: center;
     font-size: 25px;
-    }
-    #answer {
+}
+#answer {
     width:60%;
     height: 5%;
     padding:5%;
@@ -133,11 +135,67 @@ h2#ppTimer {
     position:absolute;left:0;right:0; margin:auto; z-index:10;    
     border-radius:15px;
     border:1px solid #999;
-    }
-    #right,#wrong,#ppTimer,#question,#answer{
-        opacity:0; visibility: hidden;
-    }
-    * {outline: none;}
+}
+#dataContainer {
+    position: absolute;
+    top:2%;
+    left:2%;
+    width:15%;
+    height:200px;
+    border:1px solid #999;
+}
+#dataContainer #title{
+    display: block; 
+    text-align: center;
+    color: #fff;
+    background: #323a45;
+    padding:5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height:30px;
+    line-height: 30px;
+}
+#rightTitle, #wrongTitle{
+    position: absolute;
+    top:35px;
+    left: 0;
+    padding: 5px 0 5px 0;
+    width:50%;
+    background:#1fbba6;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    height:30px;
+    line-height: 30px;
+}
+#wrongTitle {
+    background: #fd747b;
+    right:0;
+    left:auto;    
+}   
+#right, #wrong {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 50%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    font-size: 50px;
+    background:#1fbba6;
+}
+#wrong {
+    background: #fd747b;
+    right:0;
+    left:auto;   
+}
+#right,#wrong,#ppTimer,#question,#answer{
+    opacity:0; visibility: hidden;
+}
+* {outline: none;}
 </style>
 </head>
     <body>
@@ -183,8 +241,13 @@ h2#ppTimer {
                 </g>
             </svg>
         </div>
-        <div id="right" style="width:100px; height:20px;">Giuste: 0</div>
-        <div id="wrong" style="width:100px; height:20px;">Sbagliate: 0</div>
+        <div id="dataContainer">
+            <div id="title">Dati di gioco</div>
+            <div id="rightTitle">Corrette</div>
+            <div id="right" style="">0</div>
+            <div id="wrongTitle">Errate</div>
+            <div id="wrong" style="">0</div>
+        </div>
         <h2 id="ppTimer"><span id="min"></span></h2>  
         <button id="btnStart">btn</button>
     </body>
