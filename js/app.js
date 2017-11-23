@@ -1,6 +1,7 @@
 function GameSettings(options){
     this.letters = options;                        
     this.lettersEl = document.querySelectorAll("li");                    
+    this.btnStart = document.querySelectorAll("#btnStart")[0];
     this.newGameLetter = [];
     this.questionsArray = [];
     this.questions = [];
@@ -10,8 +11,9 @@ function GameSettings(options){
     this.cd;
     this.gp;
     this.gameStarted = false;
-    this.gameFinished = false;           
-    this.start();
+    this.gameFinished = false;
+    this.init();
+    //this.start();
 };
 GameSettings.prototype.questionAssign = function(obj){
     Object.keys(obj).forEach(function(key) {
@@ -42,11 +44,14 @@ GameSettings.prototype.activeQuestionEl = function(obj){
 GameSettings.prototype.start = function(obj){
     this.gameStarted = true;
     this.gp = new GamePlay(this.lettersEl, this);
-    this.cd = new CircularCntdwn(this);            
+    this.cd = new CircularCntdwn(this);  
 };
 GameSettings.prototype.finish = function(obj){
     this.gameFinished = true;
     return true;
+};
+GameSettings.prototype.init = function(){
+    this.btnStart.addEventListener("click", this.start.bind(this));
 };
 
 function GamePlay(el,gs){
@@ -315,8 +320,8 @@ Views.prototype.setSize = function(gp){
         contentMaxWidth : window.innerWidth,// document.querySelectorAll("body")[0].offsetWidth-50,
         contentMaxHeight : window.innerHeight,//document.querySelectorAll("body")[0].offsetHeight-50,
         contentRatio: 1/1,
-        top: 0.05,
-        bottom: 0.05,
+        top: 0.08,
+        bottom: 0.08,
         left:0,
         right:0,
         margin:"auto"
@@ -335,7 +340,7 @@ Views.prototype.setSize = function(gp){
     this.svg.style.strokeDashoffset = (this.circle.getAttribute("r")*2)*3.14;
     gp.inputQ.style.width = this.ratioW.dimensions[0]-110+"px";
     gp.inputQ.style.top = (this.ratioW.dimensions[0]/2)-50+"px";    
-    gp.input.style.bottom = (this.ratioW.dimensions[0]/2)-150+"px";
+    gp.input.style.bottom = (this.ratioW.dimensions[0]/2)-100+"px";
     
 };
 Views.prototype.circularShow = function(){
@@ -345,10 +350,21 @@ Views.prototype.circularShow = function(){
         var y = Math.round(this.height/2 + this.radius * Math.sin(this.angle) - this.fields[i].offsetHeight/2);      
         //this.fields[i].style.left=x+"px";
         //this.fields[i].style.top=y+"px";
-        this.tl.to(this.fields[i],0.4,{autoAlpha:1,left:x+"px",top:y+"px"},"-=0.3").play();
+        this.tl.to(this.fields[i],0.4,{
+            autoAlpha:1,
+            left:x+"px",
+            top:y+"px",
+            onComplete: function(){
+                TweenMax.to("#question",0.4,{autoAlpha:1}).play();
+                TweenMax.to("#answer",0.4,{autoAlpha:1}).play();
+                TweenMax.to("#right",0.4,{autoAlpha:1}).play();
+                TweenMax.to("#wrong",0.4,{autoAlpha:1}).play();
+                TweenMax.to("#ppTimer",0.4,{autoAlpha:1}).play();
+            },
+        },"-=0.3").play();
         this.angle += this.step; 
     }
-    
+    /*
     document.getElementById("btn").onclick = function(){   
         //var l = (0.3)*delta;
         //this.angle = (this.angle - l);
@@ -377,6 +393,7 @@ Views.prototype.circularShow = function(){
             this.angle += this.step; 
         } 
     }.bind(this);
+    */
 };
 Views.prototype.wheeling = function(){    
     //var l = (0.3)*delta;
@@ -399,7 +416,7 @@ Views.prototype.wheeling = function(){
         if(window.console) {
             //console.log(x, y);
         }
-        //this.tl.to(this.fields[i],0.2,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
+        //this.tl.to(this.fields[i],0.2,{autoAlpha:1,left:x+"px",top:y+"px"}).play();        
         TweenMax.to(this.fields[i],0.12,{autoAlpha:1,left:x+"px",top:y+"px"}).play();
         //this.fields[i].style.left=x+"px";
         //this.fields[i].style.top=y+"px";                
