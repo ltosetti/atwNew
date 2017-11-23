@@ -423,7 +423,6 @@ Views.prototype.wheeling = function(){
         this.angle += this.step; 
     }
 };
-
 /*
 =================================================================================================================
 TOSNELLO 2.0.1
@@ -532,4 +531,3 @@ TosnelloObj.prototype.init = function(position){
 };
 
 var a = new GameSettings(qa);
-//var circle = new Views("qWrap",".itemQ");
