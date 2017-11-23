@@ -237,7 +237,7 @@ GamePlay.prototype.timeout = function(gs){
                 gs.lettersEl[i].classList.remove("active");
                 gs.lettersEl[i].classList.remove("passed");
                 gs.lettersEl[i].classList.add("wrong");
-                document.getElementById("wrong").innerHTML = "Sbagliate: " + (wrong);
+                document.getElementById("wrong").innerHTML = (wrong);
                 //gs.lettersEl[i].style.background = "red";                
             }
         }       
