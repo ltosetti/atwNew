@@ -31,7 +31,7 @@ GameSettings.prototype.questionAssign = function(obj){
 };
 GameSettings.prototype.countDown = function(obj){
 
-};       
+};
 GameSettings.prototype.activeQuestionEl = function(obj){
     for (var i=0; this.lettersEl.length >i; i++){
         this.lettersEl[i].setAttribute("data-active","false"); 
@@ -123,7 +123,7 @@ GamePlay.prototype.interaction2 = function(gs){
         }*/
     }           
     //console.log(this.gamedataArray);    
-};       
+};
 GamePlay.prototype.checkAnswer = function(gs){
     if (this.gamedataArray[3] != undefined){  
         console.log(this.letterArray.length);
