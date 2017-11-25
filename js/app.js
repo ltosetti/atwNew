@@ -44,7 +44,7 @@ GameSettings.prototype.activeQuestionEl = function(obj){
 GameSettings.prototype.start = function(obj){
     this.gameStarted = true;
     this.gp = new GamePlay(this.lettersEl, this);
-    this.cd = new CircularCntdwn(this);  
+    this.cd = new CircularCntdwn(this);
 };
 GameSettings.prototype.finish = function(obj){
     this.gameFinished = true;
@@ -360,6 +360,7 @@ Views.prototype.circularShow = function(){
                 TweenMax.to("#right",0.4,{autoAlpha:1}).play();
                 TweenMax.to("#wrong",0.4,{autoAlpha:1}).play();
                 TweenMax.to("#ppTimer",0.4,{autoAlpha:1}).play();
+                document.querySelector("#answer").focus();
             },
         },"-=0.3").play();
         this.angle += this.step; 
