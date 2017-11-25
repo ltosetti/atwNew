@@ -529,5 +529,5 @@ TosnelloObj.prototype.init = function(position){
     this.setContentRatio(position);    
     //window.addEventListener("resize", this.setContentRatio.bind(this));    
 };
-
+/* test fetch repository */
 var a = new GameSettings(qa);
