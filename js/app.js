@@ -246,7 +246,8 @@ GamePlay.prototype.timeout = function(gs){
     console.log("sbagliate","---------------",wrong);    
 };
 
-function CircularCntdwn(gs){            
+function CircularCntdwn(gs){  
+    ccnt = this;
     this.time = 120;           
     this.svg = document.querySelector('.circle_animation');    
     //this.svg.style.strokeDasharray = ((Views.ratioW.dimensions[0]*3.14)) //"1337";
@@ -261,7 +262,8 @@ function CircularCntdwn(gs){
     this.interval = setInterval(function() {                
         this.svg.style.strokeDashoffset = this.initialOffset-(i*(this.initialOffset/this.time));  
         setTimeout(function(){
-            this.svg.parentNode.parentNode.style.opacity = 1;
+            //this.svg.parentNode.parentNode.style.opacity = 1;
+            TweenMax.to(ccnt.svg.parentNode.parentNode,0.5,{autoAlpha:1});
         }.bind(this),800);        
         this.timeMin.innerHTML = this.formatSeconds(this.time-i);                  
         if (i >= (this.time / 2)*1 && i <= ((this.time / 2)*1)+2) { 
@@ -335,12 +337,16 @@ Views.prototype.setSize = function(gp){
     this.circle.setAttribute("cy",(this.ratioW.dimensions[0]/2));
     this.circle.setAttribute("cx",(this.ratioW.dimensions[0]/2));
     this.circle.style.strokeWidth = 15//this.circle.getAttribute("cy");
-    this.svg.style.zIndex = -1;
+    //this.svg.style.zIndex = -1;
     this.svg.style.strokeDasharray = (this.circle.getAttribute("r")*2)*3.14; //"1337";
     this.svg.style.strokeDashoffset = (this.circle.getAttribute("r")*2)*3.14;
     gp.inputQ.style.width = this.ratioW.dimensions[0]-110+"px";
     gp.inputQ.style.top = (this.ratioW.dimensions[0]/2)-50+"px";    
     gp.input.style.bottom = (this.ratioW.dimensions[0]/2)-100+"px";
+    gp.inputQ.style["z-index"] = 10;  
+    gp.input.style["z-index"] = 10;  
+    gp.input.style.bottom = (this.ratioW.dimensions[0]/2)-100+"px";
+    
     
 };
 Views.prototype.circularShow = function(){

@@ -2,7 +2,19 @@
 <head>
 <style>
     html,body {
-        width: 100%; height:100%; margin:0; padding:0; font-family: sans-serif;
+        width: 100%; 
+        height:100%; 
+        margin:0; 
+        padding:0; 
+        font-family: sans-serif;        
+        background: rgba(147,206,222,1);
+background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
     }
 /*---  countdown Circular ---*/
 .item {
@@ -67,9 +79,13 @@ svg {
     */
     width: 50px; height:50px; line-height: 50px; font-size: 35px;
     position: absolute; 
-    border:1px solid #999;   
-    font-family: sans-serif; 
+    /*
+    border:1px solid #999;
     color:#999;
+    */
+    border:1px solid #fff;
+    color:#fff;
+    font-family: sans-serif;     
     transition: transform 0.2s ease-in-out;
 }
 #crosshair-x { 
@@ -93,6 +109,7 @@ svg {
     text-align: center; 
     border-radius:50%;
     opacity:0;
+    z-index: 20;
 }
 .itemQ.active{
     background:#999; 
@@ -263,7 +280,7 @@ h2#ppTimer {
             </h2>-->
             <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
                 <g>              
-                    <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="none"/>
+                    <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="#fff"/>
                 </g>
             </svg>
         </div>
