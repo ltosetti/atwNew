@@ -152,6 +152,7 @@ GamePlay.prototype.checkAnswer = function(gs){
         } else if (this.input.value.toLowerCase() == "")  {
            this.passed();
         }
+        //var current = this.input.getAttribute("data-current");       
     }    
     if (this.gamedataArray[0] == (this.letterArray.length-1)){ 
         this.firstPlayComplete = true;
@@ -162,7 +163,8 @@ GamePlay.prototype.checkAnswer = function(gs){
     this.input.value = ""; 
     setTimeout(function(){
         this.view.wheeling();
-    }.bind(this),500);
+    }.bind(this),500);    
+    console.log(parseInt(this.gamedataArray[1].id.replace("q",""))+1);    
     
 };
 GamePlay.prototype.passed = function(gs){
@@ -179,15 +181,17 @@ GamePlay.prototype.keyListener = function(gs){
     this.input.addEventListener('keyup', function (e) {
         if (e.keyCode == 13) {                    
             this.checkAnswer(gs);                   
-            this.interaction2(gs);                   
-         }
+            this.interaction2(gs);             
+        }
     }.bind(this));
+    /*
     this.input.addEventListener('keyup', function (e) {
         if (e.keyCode == 40) {
             this.passed(gs);
             this.interaction2(gs);   
         }
     }.bind(this));
+    */
 };
 GamePlay.prototype.checkNotAnswered = function(gs){
     this.toResponde = [];
