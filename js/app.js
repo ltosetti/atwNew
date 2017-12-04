@@ -151,8 +151,7 @@ GamePlay.prototype.checkAnswer = function(gs){
             this.gamedataArray[1].classList.add("wrong");
         } else if (this.input.value.toLowerCase() == "")  {
            this.passed();
-        }
-        //var current = this.input.getAttribute("data-current");       
+        }              
     }    
     if (this.gamedataArray[0] == (this.letterArray.length-1)){ 
         this.firstPlayComplete = true;
@@ -163,8 +162,12 @@ GamePlay.prototype.checkAnswer = function(gs){
     this.input.value = ""; 
     setTimeout(function(){
         this.view.wheeling();
-    }.bind(this),500);    
-    console.log(parseInt(this.gamedataArray[1].id.replace("q",""))+1);    
+    }.bind(this),500);        
+    if (parseInt(this.gamedataArray[1].id.replace("q",""))+1 != 21)
+        console.log(parseInt(this.gamedataArray[1].nextElementSibling.id.replace("q",""))+1);
+    else {
+        console.log(parseInt(this.gamedataArray[1].id.replace("q",""))+1);
+    }
     
 };
 GamePlay.prototype.passed = function(gs){
