@@ -7,17 +7,14 @@
         margin:0; 
         padding:0; 
         font-family: sans-serif;        
-        /*
         background: rgba(147,206,222,1);
-        background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)),   color-stop(100%, rgba(73,165,191,1)));
-        background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-        background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-        background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-        background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
-        */
-        background: radial-gradient(circle, #3F9CBA 0%, #153346 100%);
+background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
     }
 /*---  countdown Circular ---*/
 .item {
@@ -153,8 +150,7 @@ svg {
 #dataContainer {
     position: absolute;
     top:20px;
-    /*left:24px;*/
-    left:-100%;
+    left:24px;
     width:285px;
     height:170px;
     /*border:1px solid #999;*/
@@ -163,93 +159,20 @@ svg {
     position: absolute;
     background:#14b9d6;
     top:205px;
-    /*left:24px;*/
-    left:-100%;
+    left:24px;
     width:285px;
     height:170px;
     /*border:1px solid #999;   */
 }
-/*    
-#btnStart {
-    position: absolute;    
-    top:0; bottom:0; left:0; right:0;
-    margin:auto;
-    width: 285px;
-    height: 55px;
-    padding: 5px;
-}
-    */
-#btnStart {
-    position: absolute;
-    top:0; bottom:0; left:0; right:0;
-    margin:auto;
-    /*
-    display: block;
-    position: relative;
-    */
-    background: none;
-    width: 250px;
-    height: 80px;
-    line-height: 20px;
-    text-align: center;
-    
-    font-size: 40px;
-    
-    text-decoration: none;
-    /*text-transform: uppercase;*/
-    color: #fff;    
-    /*font-family: Helvetica, Arial, sans-serif;*/
-    box-sizing: border-box;
-    cursor: pointer;
-}
-/* Button Border Style */
-
-#btnStart.border {
-    border:none;
-    border-top: 5px solid #fff;
-    border-bottom: 5px solid #fff;
-}
-#btnStart.border:hover {
-  background: #e04e5e;
-  color: #fff;
-}
-#btnStart.ribbon-outset.border:after,
-#btnStart.ribbon-outset.border:before {
-  top: 50%;
-  content: " ";
-  height: 43px;
-  width: 43px;
-  position: absolute;
-  pointer-events: none;
-  /*background: #fff;*/
-}
-#btnStart.ribbon-outset.border:after {
-  left: -1px;
-  margin-top: -40px;
-  transform-origin: 0 0;
-  box-sizing: border-box;
-  border-bottom: 5px solid #fff;
-  border-left: 5px solid #fff;
-  transform: rotate(57.5deg) skew(30deg);
-}
-#btnStart.ribbon-outset.border:before {
-  right: -43px;
-  margin-top: -40px;
-  transform-origin: 0 0;
-  box-sizing: border-box;
-  border-top: 5px solid #fff;
-  border-right: 5px solid #fff;
-  transform: rotate(57.5deg) skew(30deg);
-}
-#btnStart.ribbon-outset.border:hover:after {
-  background: #e04e5e;
-}
-#btnStart.ribbon-outset.border:hover:before {
-  background: #e04e5e;
-}
-    
-/* finish button hex style */
-    
+     #btnStart {
+        position: absolute;
+        top: 390px;
+         left: 24px;
+        width: 285px;
+        height: 55px;
+        padding: 5px;
+        
+    }
 #dataContainer #title, #timeContainer #timetitle{
     display: block; 
     text-align: center;
@@ -358,7 +281,7 @@ h2#ppTimer {
             </h2>-->
             <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
                 <g>              
-                    <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="#73b7df"/>
+                    <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="#fff"/>
                 </g>
             </svg>
         </div>
@@ -373,8 +296,7 @@ h2#ppTimer {
             <div id="timeTitle">Countdown</div>
             <h2 id="ppTimer"><span id="min"></span></h2> 
         </div>
-        <button id="btnStart" class="ribbon-outset border">start game</button>
-        <div id="copyRight" style="position:absolute; bottom:1%; right:1%; color:#fff;">&copy; 2018 MadDog Media</div>
+        <button id="btnStart">btn</button>
     </body>
     <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
     <script src="js/questions.js"></script>
