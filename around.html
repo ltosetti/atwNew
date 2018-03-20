@@ -112,13 +112,14 @@ svg {
     text-align: center; 
     border-radius:50%;
     opacity:0;
-    z-index: 20;
+    /*z-index: 20;*/
 }
 .itemQ.active{
     background:#999; 
     border:1px solid #686868; 
     color:#fff;
     transform: scale(1.53);
+    z-index: 30;
 }
 .itemQ.wrong{
     background:#fd5757; 
@@ -145,10 +146,17 @@ svg {
     height: 5%;
     padding:5%;
     font-size: 30px;
-    position:absolute;left:0;right:0; margin:auto; z-index:10;    
+    position:absolute;left:0;right:0; margin:0 auto; z-index:10;    
     border-radius:15px;
     border:1px solid #999;
     text-align: center;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #answer {
+        padding:35px;
+        width:350px;
+        height: 85px;
+    } /* IE10+ CSS styles go here */
 }
 #dataContainer {
     position: absolute;

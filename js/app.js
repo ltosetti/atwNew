@@ -338,17 +338,31 @@ Views.prototype.layout = function(){
 };
 Views.prototype.setSize = function(gp){
     var d = this.parent;
-    var e = this.wWrapper;    
-    this.ratioW = new TosnelloObj(d,e, {   
-        contentMaxWidth : window.innerWidth,// document.querySelectorAll("body")[0].offsetWidth-50,
-        contentMaxHeight : window.innerHeight,//document.querySelectorAll("body")[0].offsetHeight-50,
-        contentRatio: 1/1,
-        top: 0.08,
-        bottom: 0.08,
-        left:0,
-        right:0,
-        margin:"auto"
-    });   
+    var e = this.wWrapper;
+    if (window.innerWidth < 1340){
+        this.ratioW = new TosnelloObj(d,e, {   
+            contentMaxWidth : window.innerWidth,// document.querySelectorAll("body")[0].offsetWidth-50,
+            contentMaxHeight : window.innerHeight,//document.querySelectorAll("body")[0].offsetHeight-50,
+            contentRatio: 1/1,
+            top: 0.15,
+            bottom: 0.15,
+            left:0.35,
+            right:0,
+            margin:"auto"
+        });
+        gp.inputQ.style.fontSize = "21px";
+    } else {
+        this.ratioW = new TosnelloObj(d,e, {   
+            contentMaxWidth : window.innerWidth,// document.querySelectorAll("body")[0].offsetWidth-50,
+            contentMaxHeight : window.innerHeight,//document.querySelectorAll("body")[0].offsetHeight-50,
+            contentRatio: 1/1,
+            top: 0.08,
+            bottom: 0.08,
+            left:0,
+            right:0,
+            margin:"auto"
+        });   
+    }
     this.ratioW.init();
     this.svg.setAttribute("width", this.ratioW.dimensions[0]);
     this.svg.setAttribute("height", this.ratioW.dimensions[1]);
