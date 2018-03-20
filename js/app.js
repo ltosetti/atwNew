@@ -258,7 +258,7 @@ GamePlay.prototype.timeout = function(gs){
 
 function CircularCntdwn(gs){  
     ccnt = this;
-    this.time = 120;           
+    this.time = 120;    
     this.svg = document.querySelector('.circle_animation');    
     //this.svg.style.strokeDasharray = ((Views.ratioW.dimensions[0]*3.14)) //"1337";
     //this.svg.style.strokeDashoffset = "1337";
@@ -276,13 +276,13 @@ function CircularCntdwn(gs){
             TweenMax.to(ccnt.svg.parentNode.parentNode,0.5,{autoAlpha:1});
         }.bind(this),800);        
         this.timeMin.innerHTML = this.formatSeconds(this.time-i);                  
-        if (i >= (this.time / 2)*1 && i <= ((this.time / 2)*1)+2) { 
+        if (i >= (this.time / 2)*1 && i <= ((this.time / 2)*1)+2) {
             this.svg.style.stroke = "#ffd000";
             console.log("quartile1");                   
         } else if (i >= (this.time / 3)*2 && i <= ((this.time / 3)*2)+2) {
             this.svg.style.stroke = "#ff9d00";
             console.log("quartile2")
-        } else if (i >= (this.time / 4)*3 && i <= ((this.time / 4)*3)+2) {
+        } else if (i >= (this.time / 4)*3.5 && i <= ((this.time / 4)*3.5)+2) {
             this.svg.style.stroke = "#ff0000";
             console.log("quartile3")
         } 
@@ -347,10 +347,12 @@ Views.prototype.setSize = function(gp){
             top: 0.15,
             bottom: 0.15,
             left:0.35,
-            right:0,
+            right:0.1,
             margin:"auto"
         });
         gp.inputQ.style.fontSize = "21px";
+        document.getElementById("dataContainer").style.width = "200px";
+        document.getElementById("timeContainer").style.width = "200px";
     } else {
         this.ratioW = new TosnelloObj(d,e, {   
             contentMaxWidth : window.innerWidth,// document.querySelectorAll("body")[0].offsetWidth-50,
