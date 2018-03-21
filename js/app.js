@@ -79,7 +79,7 @@ function GamePlay(el,gs){
     this.view = new Views("qWrap",".itemQ", this);
     this.rightA = 0;
     this.wrongA = 0;
-    this.wheelingOnReply = false;
+    this.wheelingOnReply = false;    
     //this.view.circularShow();
 };
 GamePlay.prototype.interaction2 = function(gs){
@@ -107,7 +107,6 @@ GamePlay.prototype.interaction2 = function(gs){
             //TweenMax.to(currentEl,0.3,{className:"+=active"});
             currentEl.classList.add("active");
             //currentEl.style.background = "#999";
-
             currentAnswer = gs.questions[index][0];                     
             currentQuestionAssociated = "<strong>"+gs.questions[index][1]+"</strong>";                    
             this.inputQ.innerHTML = currentQuestionAssociated;
@@ -116,7 +115,7 @@ GamePlay.prototype.interaction2 = function(gs){
             this.gamedataArray.push(currentEl);
             this.gamedataArray.push(currentQuestionAssociated);
             this.gamedataArray.push(currentAnswer);                   
-
+            console.log(currentEl.classList[0]);
             break;
         } 
         /*if (this.gamedataArray ==[]){
@@ -137,7 +136,7 @@ GamePlay.prototype.checkAnswer = function(gs){
             this.gamedataArray[1].setAttribute("data-correct","true");
             this.gamedataArray[1].classList.remove("active");
             this.gamedataArray[1].classList.remove("passed");
-            this.gamedataArray[1].classList.add("right");
+            this.gamedataArray[1].classList.add("right");            
             //this.gamedataArray[1].style.background = "green";
         } else if (this.input.value.toLowerCase() != this.gamedataArray[3].toLowerCase() && this.input.value.toLowerCase() != "")  {
             console.log("sbagliatoooo!!!");
@@ -153,12 +152,14 @@ GamePlay.prototype.checkAnswer = function(gs){
         } else if (this.input.value.toLowerCase() == "")  {
            this.passed();
         }              
-    }    
+    }
+    this.analitycs();
+    
     if (this.gamedataArray[0] == (this.letterArray.length-1)){ 
         this.firstPlayComplete = true;
         console.log("giro finito");
         this.checkNotAnswered(gs);
-        this.finish(gs);                
+        this.finish(gs);         
     }
     this.input.value = ""; 
     setTimeout(function(){
@@ -208,6 +209,13 @@ GamePlay.prototype.checkNotAnswered = function(gs){
         }                
     }
     console.log(this.toResponde);            
+};
+GamePlay.prototype.analitycs = function(){
+    console.log("media risposte: " + (parseInt(document.getElementById("right").innerHTML)-parseInt(document.getElementById("wrong").innerHTML)));
+    
+    console.log("percentuale corrette: " + ((parseFloat(document.getElementById("right").innerHTML/21))*100).toFixed(1)+"%");
+    
+    console.log("corrette: " + ((parseFloat(document.getElementById("right").innerHTML)))+"/21");    
 };
 GamePlay.prototype.finish = function(gs){
     var right = 0;
