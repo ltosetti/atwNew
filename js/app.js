@@ -171,8 +171,7 @@ GamePlay.prototype.checkAnswer = function(gs){
         console.log(parseInt(this.gamedataArray[1].nextElementSibling.id.replace("q",""))+1);
     else {
         console.log(parseInt(this.gamedataArray[1].id.replace("q",""))+1);
-    }
-    
+    }    
 };
 GamePlay.prototype.passed = function(gs){
     console.log("passaparola");
@@ -235,10 +234,21 @@ GamePlay.prototype.finish = function(gs){
                 gs.lettersEl[i].classList.add("wrong");
                 //gs.lettersEl[i].style.background = "red";
             }
-        }               
+        } 
+        this.recap();
     }
     console.log("giuste","---------------",right);
-    console.log("sbagliate","---------------",wrong);
+    console.log("sbagliate","---------------",wrong);    
+};
+GamePlay.prototype.recap = function(){
+    TweenMax.to("#ModalGameOver",0.5,{autoAlpha:1});
+    //setTimeout(function(){});
+    document.getElementById("recapLeft").innerHTML = document.getElementById("right").innerHTML;
+    document.getElementById("RecapMin").innerHTML = document.getElementById("min").innerHTML;
+    var score = parseInt(document.getElementById("right").innerHTML * 10);
+    document.getElementById("RecapScore").innerHTML = score;
+    fitText(document.querySelectorAll('.recapLabel'), 2.2);
+    fitText(document.getElementById('gameOver'),1.8);
 };
 GamePlay.prototype.timeout = function(gs){
     var right = 0;
@@ -258,10 +268,11 @@ GamePlay.prototype.timeout = function(gs){
                 document.getElementById("wrong").innerHTML = (wrong);
                 //gs.lettersEl[i].style.background = "red";                
             }
-        }       
-    }
+        }  
+        this.recap();
+    }    
     console.log("giuste","---------------",right);
-    console.log("sbagliate","---------------",wrong);    
+    console.log("sbagliate","---------------",wrong);   
 };
 
 function CircularCntdwn(gs){  
@@ -332,7 +343,8 @@ function Views(container, items,gp){
     this.tl = new TimelineMax();
     //console.log(this.tl);
     this.layout();
-    this.circularShow();    
+    this.circularShow(); 
+    //this.textFormatting();
 };
 Views.prototype.layout = function(){
     TweenMax.to("#timeContainer",0.5,{
@@ -394,6 +406,12 @@ Views.prototype.setSize = function(gp){
     
     
 };
+/*
+Views.prototype.textFormatting = function(){
+    fitText(document.querySelectorAll('.recapLabel'), 2.2);
+    fitText(document.getElementById('gameOver'),1.8);
+};
+*/
 Views.prototype.circularShow = function(){
     TweenMax.set(".itemQ",{autoAlpha:0});
     for (var i=0;this.fields.length > i; i++){
