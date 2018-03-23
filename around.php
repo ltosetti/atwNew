@@ -5,8 +5,8 @@ $params = $_GET;
 // defaults
 $params['url'] = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $params['type'] = (isset($_GET['type']) ? $_GET['type'] : 'article');
-/*if($params['c'] == "Ravenna"){*/
-if($params['c'] == "cico"){
+$params['c'] = (isset($_GET['c']) ? $_GET['c'] : '0');
+if(isset($params['c']) && $params['c'] == "0"){
     $metas['image'] = "sample";
     $metas['score'] = isset($_GET['score']);
     $metas['name'] = isset($_GET['name']);
@@ -17,7 +17,8 @@ if($params['c'] == "cico"){
     $metas['score'] = isset($_GET['score']);
     $metas['name'] = isset($_GET['name']);
     $metas['title'] = "Around the Word";
-    $metas['description'] = $metas['name']." ha totalizzato ".$metas['score']." punti";
+    //$metas['description'] = ucfirst($params['n'])." ha totalizzato ".ucfirst($params['n'])." punti";
+    $metas['description'] = "ha totalizzato ".$params['c']." punti";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -135,7 +136,7 @@ if($params['c'] == "cico"){
         </a>
         -->
     
-        <input type="text" name="score" id="inputScore" value="10" style="position:absolute;">
+        <input type="text" name="score" id="inputScore" value="10" style="position:absolute;bottom:0;">
       
         <a class="shareFb btnShare" href="" data-customaction="ravenna_share-fb" target="_blank">facebook</a>
         <!--<a href="http://www.facebook.com/sharer.php?u=<%= $metas['url'] %>&p[images][0]=<%= $metas['image']  %>&description=<%= $metas['description'] %>">Facebook</a>-->
@@ -151,8 +152,9 @@ if($params['c'] == "cico"){
             document.querySelector(".shareFb").addEventListener("click",function(event){
                 event.preventDefault();                
                 prepend = fb_pre;              
-                //window.open(prepend+escape(url+"&n="+document.querySelector("#"+" input").value));  
-                window.open(prepend+escape(url+"&n="+document.querySelector("#"+"inputScore").value));  
+                //window.open(prepend+escape(url+"&n="+document.querySelector("#"+" input").value));
+                var d = new Date();
+                window.open(prepend+escape(url+document.querySelector("#"+"inputScore").value)+"&t="+d.getTime());  
             });
         </script>        
       
