@@ -241,16 +241,18 @@ GamePlay.prototype.finish = function(gs){
     console.log("sbagliate","---------------",wrong);    
 };
 GamePlay.prototype.recap = function(){
-    TweenMax.to("#ModalGameOver",0.5,{autoAlpha:1});
-    //setTimeout(function(){});
+    TweenMax.to("#ModalGameOver",0.5,{autoAlpha:1});   
     document.getElementById("recapLeft").innerHTML = document.getElementById("right").innerHTML;
     document.getElementById("RecapMin").innerHTML = document.getElementById("min").innerHTML;
     var score = parseInt(document.getElementById("right").innerHTML * 10);
     document.getElementById("RecapScore").innerHTML = score;
     fitText(document.querySelectorAll('.recapLabel'), 2.2);
     fitText(document.getElementById('gameOver'),1.8);
+    fitText(document.getElementById('gameReplayBtn'),1);
     document.getElementById("inputScore").value = score;
-    
+    document.getElementById("gameReplayBtn").onclick = function(){
+        window.location.reload();
+    }    
 };
 GamePlay.prototype.timeout = function(gs){
     var right = 0;
@@ -279,7 +281,7 @@ GamePlay.prototype.timeout = function(gs){
 
 function CircularCntdwn(gs){  
     ccnt = this;
-    this.time = 120;    
+    this.time = 5;    
     this.svg = document.querySelector('.circle_animation');    
     //this.svg.style.strokeDasharray = ((Views.ratioW.dimensions[0]*3.14)) //"1337";
     //this.svg.style.strokeDashoffset = "1337";

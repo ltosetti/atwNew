@@ -39,47 +39,43 @@ if(isset($params['c']) && $params['c'] == "0"){
         <link type="text/css" rel="stylesheet" href="css/atwStyle.css" />
 </head>
 <body>
-     <?php
-        echo '<pre>';
-            print_r($params);
-            print_r($metas);
-        echo '</pre>';
-        ?>           
-        <div id="wrapper" class="item html">
-            <ul id="qWrap" style="position:absolute;padding:0; margin:0;">
-                <li id="q0" class="a itemQ">A</li>            
-                <li id="q1" class="b itemQ">B</li>
-                <li id="q2" class="c itemQ">C</li>
-                <li id="q3" class="d itemQ">D</li>
-                <li id="q4" class="e itemQ">E</li>            
-                <li id="q5" class="f itemQ">F</li>
-                <li id="q6" class="g itemQ">G</li>
-                <li id="q7" class="h itemQ">H</li>
-                <li id="q8" class="i itemQ">I</li>            
-                <li id="q9" class="l itemQ">L</li>
-                <li id="q10" class="m itemQ">M</li>
-                <li id="q11" class="n itemQ">N</li>
-                <li id="q12" class="o itemQ">O</li>            
-                <li id="q13" class="p itemQ">P</li>
-                <li id="q14" class="q itemQ">Q</li>
-                <li id="q15" class="r itemQ">R</li>
-                <li id="q16" class="s itemQ">S</li>            
-                <li id="q17" class="t itemQ">T</li>
-                <li id="q18" class="u itemQ">U</li>
-                <li id="q19" class="v itemQ">V</li>
-                <li id="q20" class="z itemQ">Z</li>
-            </ul>
-            <div id="question" data-current="q0"></div>
-            <br />
-            <input id="answer" data-current="q0" type="text" />       
-            <!--<h2>
-                <span id="min"></span>
-            </h2>-->
-            <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
-                <g>              
-                    <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="#73b7df"/>
-                </g>
-            </svg>
+<?php
+echo '<pre>';
+    print_r($params);
+    print_r($metas);
+echo '</pre>';?>           
+    <div id="wrapper" class="item html">
+        <ul id="qWrap" style="position:absolute;padding:0; margin:0;">
+            <li id="q0" class="a itemQ">A</li>            
+            <li id="q1" class="b itemQ">B</li>
+            <li id="q2" class="c itemQ">C</li>
+            <li id="q3" class="d itemQ">D</li>
+            <li id="q4" class="e itemQ">E</li>            
+            <li id="q5" class="f itemQ">F</li>
+            <li id="q6" class="g itemQ">G</li>
+            <li id="q7" class="h itemQ">H</li>
+            <li id="q8" class="i itemQ">I</li>            
+            <li id="q9" class="l itemQ">L</li>
+            <li id="q10" class="m itemQ">M</li>
+            <li id="q11" class="n itemQ">N</li>
+            <li id="q12" class="o itemQ">O</li>            
+            <li id="q13" class="p itemQ">P</li>
+            <li id="q14" class="q itemQ">Q</li>
+            <li id="q15" class="r itemQ">R</li>
+            <li id="q16" class="s itemQ">S</li>            
+            <li id="q17" class="t itemQ">T</li>
+            <li id="q18" class="u itemQ">U</li>
+            <li id="q19" class="v itemQ">V</li>
+            <li id="q20" class="z itemQ">Z</li>
+        </ul>
+        <div id="question" data-current="q0"></div>
+        <br />
+        <input id="answer" data-current="q0" type="text" />
+        <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+            <g>              
+                <circle id="circle" class="circle_animation" r="125" cy="300" cx="300" stroke-width="8" stroke="#6fdb6f" fill="#73b7df"/>
+            </g>
+        </svg>
         </div>
         <div id="dataContainer">
             <div id="title">Dati di gioco</div>
@@ -102,8 +98,7 @@ if(isset($params['c']) && $params['c'] == "0"){
                     <span id ="recapLeft" class="recapLeft point">0</span>
                     <span class="recapMiddle">/</span>
                     <span class="recapRight point">21</span>
-                </div>
-                
+                </div>                
                 <hr style="width:75%;">
                 <!--<div id="labelRecapWrong" class="recapLabel">Risposte Sbagliate</div>
                 <div id="RecapWrong" class="recap">0</div>
@@ -117,30 +112,17 @@ if(isset($params['c']) && $params['c'] == "0"){
                 <hr style="width:75%;">
                 <div id="labelRecapScore" class="recapLabel">Punteggio finale</div>
                 <div id="RecapScore" class="recap" style="font-size:65px; font-weight: bold;">80</div>
-                <div id="gameReplayBtn">Gioca ancora</div>
+                <div id="gameReplayBtn" class="modalBtn">Gioca ancora</div>
+                <a class="shareFb btnShare modalBtn" href="" target="_blank"></a>
             </div>
         </div>
         <button id="btnStart" class="ribbon-outset border">start game</button>
-        <div id="copyRight" style="position:absolute; bottom:1%; right:1%; color:#fff;">&copy; 2018 MadDog Media</div>
-        <!--
-        <a id="facebook-Link"
-            href="http://www.facebook.com/sharer.php?
-            s=100
-            &p[url]=the url you want to share
-            &p[images][0]=the image you want to share
-            &p[title]=the title you want to share
-            &p[summary]=the description/summary you want to share" 
-            target="_blank">
-             <img src="your/path/to/facebook-icon.png" 
-               alt="Share on Facebook" />
-        </a>
-        -->
+        <div id="copyRight" style="position:absolute; bottom:1%; right:1%; color:#fff;">&copy; 2018 MadDog Media</div>       
     
         <input type="text" name="score" id="inputScore" value="10" style="position:absolute;bottom:0;">
       
-        <a class="shareFb btnShare" href="" data-customaction="ravenna_share-fb" target="_blank">facebook</a>
-        <!--<a href="http://www.facebook.com/sharer.php?u=<%= $metas['url'] %>&p[images][0]=<%= $metas['image']  %>&description=<%= $metas['description'] %>">Facebook</a>-->
-        <a href="http://www.facebook.com/sharer.php?u=http://aroundtheword.it?c=&p[images][0]=<%= $metas['image']  %>&description=<%= $metas['description'] %>">Facebook</a>
+        
+        
         <script src="lib/fitText.js" type="text/javascript"></script>
         <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
         <script src="js/questions.js"></script>

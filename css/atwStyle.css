@@ -317,6 +317,7 @@ h2#ppTimer {
     height:100%; 
     line-height:50px; 
     color:#fff;
+    font-weight: bold;
 }
 #ModalGameOver #ModalGameOverBody {
     width:100%; 
@@ -329,7 +330,7 @@ h2#ppTimer {
     padding:25px 0 0 0;
 }
 #ModalGameOver #ModalGameOverBody .recap {
-    padding:10px 0 10px 0;
+    padding:10px 0 10px 0;   
     color:#999;
 }
 .recapLeft {font-size:80px;position: absolute; top:0; right:75px; bottom:0; margin:auto;color:#1fbba6;}
@@ -342,16 +343,27 @@ h2#ppTimerRecap {
     text-align: center;
     padding: 0; margin: 0;
 }
-#ModalGameOver #ModalGameOverBody #gameReplayBtn {
+#ModalGameOver #ModalGameOverBody .modalBtn {
     width:230px; 
     height:50px; 
     line-height:50px; 
     color:#fff;
     text-align:center; 
     border-radius:10px; 
-    background:#808ed2; 
-    border: 1px solid #fff; 
+    background:#323a45; 
+    border: 3px solid #fff; 
     cursor:pointer;
     margin:0 auto;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
 }
+#ModalGameOver #ModalGameOverBody .shareFb {
+    background: url(../img/fbBtnBg.png)no-repeat center;
+    background-size: contain;
+}
+#ModalGameOver #ModalGameOverBody .modalBtn:hover{
+    border:3px solid #fd747b;
+}
+
 * {outline: none;}
