@@ -281,7 +281,7 @@ GamePlay.prototype.timeout = function(gs){
 
 function CircularCntdwn(gs){  
     ccnt = this;
-    this.time = 5;    
+    this.time = 120;    
     this.svg = document.querySelector('.circle_animation');    
     //this.svg.style.strokeDasharray = ((Views.ratioW.dimensions[0]*3.14)) //"1337";
     //this.svg.style.strokeDashoffset = "1337";
@@ -410,12 +410,6 @@ Views.prototype.setSize = function(gp){
     
     
 };
-/*
-Views.prototype.textFormatting = function(){
-    fitText(document.querySelectorAll('.recapLabel'), 2.2);
-    fitText(document.getElementById('gameOver'),1.8);
-};
-*/
 Views.prototype.circularShow = function(){
     TweenMax.set(".itemQ",{autoAlpha:0});
     for (var i=0;this.fields.length > i; i++){
