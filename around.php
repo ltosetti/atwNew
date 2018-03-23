@@ -5,7 +5,7 @@ $params = $_GET;
 // defaults
 $params['url'] = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $params['type'] = (isset($_GET['type']) ? $_GET['type'] : 'article');
-$params['c'] = (isset($_GET['c']) ? $_GET['c'] : '0');
+$params['c'] = (isset($_GET['c']) ? $_GET['c'] : '0'); //read querystring
 if(isset($params['c']) && $params['c'] == "0"){
     $metas['image'] = "sample";
     $metas['score'] = isset($_GET['score']);
