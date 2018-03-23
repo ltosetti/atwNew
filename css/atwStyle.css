@@ -182,7 +182,6 @@ svg {
     cursor: pointer;
 }
 /* Button Border Style */
-
 #btnStart.border {
     border:none;
     border-top: 5px solid #fff;
@@ -333,9 +332,9 @@ h2#ppTimer {
     padding:10px 0 10px 0;
     color:#999;
 }
-    .recapLeft {font-size:80px;position: absolute; top:0; right:75px; bottom:0; margin:auto;color:#1fbba6;}
-    .recapMiddle {position: absolute; top:0; left:95px; bottom:0; margin:auto;font-size:80px}
-    .recapRight {font-size:40px;position: absolute; bottom:22; right:0;}
+.recapLeft {font-size:80px;position: absolute; top:0; right:75px; bottom:0; margin:auto;color:#1fbba6;}
+.recapMiddle {position: absolute; top:0; left:95px; bottom:0; margin:auto;font-size:80px}
+.recapRight {font-size:40px;position: absolute; bottom:22px; right:0;}
 h2#ppTimerRecap {       
     width: 100%;      
     font-size: 50px;    
