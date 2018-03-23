@@ -604,4 +604,3 @@ TosnelloObj.prototype.init = function(position){
 };
 /* test fetch repository */
 var a = new GameSettings(qa);
-
