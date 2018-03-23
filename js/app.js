@@ -249,6 +249,8 @@ GamePlay.prototype.recap = function(){
     document.getElementById("RecapScore").innerHTML = score;
     fitText(document.querySelectorAll('.recapLabel'), 2.2);
     fitText(document.getElementById('gameOver'),1.8);
+    document.getElementById("inputScore").value = score;
+    
 };
 GamePlay.prototype.timeout = function(gs){
     var right = 0;
@@ -606,3 +608,4 @@ TosnelloObj.prototype.init = function(position){
 };
 /* test fetch repository */
 var a = new GameSettings(qa);
+

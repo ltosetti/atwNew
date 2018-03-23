@@ -1,5 +1,42 @@
+<?php
+$params = array();
+$metas = array();
+$params = $_GET;
+// defaults
+$params['url'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";/*(isset($_GET['url']) ? $_GET['url'] : 'http://www.shaa.it');*/
+$params['type'] = (isset($_GET['type']) ? $_GET['type'] : 'article');
+if($params['c'] == "Ravenna"){
+    $metas['image'] = "share_ravenna";
+    $metas['title'] = "Il cacciatore e la regina di ghiaccio";
+    $metas['description'] = $params['n']." sei come ".$params['c']." Ravenna, brillante ed appariscente, non ti piace passare inosservato/a. Guai a farti un torto, la vendetta è assicurata!";
+    
+} elseif  ($params['c'] == "Eric"){
+    $metas['image'] = "share_eric";
+    $metas['title'] = "Il cacciatore e la regina di ghiaccio";
+    $metas['description'] = $params['n']." sei come ".$params['c'].", casual e pratico/a, sempre pronto/a ad aiutare gli altri. Meglio non dar fastidio alle persone che ami, perché ti scateni come una furia!";
+    
+} else {
+    $metas['image'] = "share_freya";
+    $metas['title'] = "Il cacciatore e la regina di ghiaccio";
+    $metas['description'] = $params['n']." sei come ".$params['c'].", elegante e raffinata/o, non hai mai un capello fuori posto. Ma se qualcuno ti fa arrabbiare, è guerra senza esclusione ti colpi!";
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
+    <head>
+        <title></title>        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- Open Graph meta tags -->       
+        <meta property="og:url" content="<?php echo $params['url']; ?>" />
+        <meta property="og:type" content="<?php echo $params['type']; ?>"/>        
+        <meta property="og:title" content="<?php echo $metas['title']; ?>"/>
+        <meta property="og:image" content="http://www.shaa.it/demo/uci/images/<?php echo $metas['image']; ?>.jpg"/>
+        <meta property="og:description" content="<?php echo $metas['description']; ?>"/>       
+        
+        <meta itemprop="name" content="">        
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="<?php echo $metas['description']; ?>">
+ 
 <style>
     html,body {
         width: 100%; 
@@ -475,10 +512,32 @@ h2#ppTimerRecap {
         </div>
         <button id="btnStart" class="ribbon-outset border">start game</button>
         <div id="copyRight" style="position:absolute; bottom:1%; right:1%; color:#fff;">&copy; 2018 MadDog Media</div>
+        <!--
+        <a id="facebook-Link"
+            href="http://www.facebook.com/sharer.php?
+            s=100
+            &p[url]=the url you want to share
+            &p[images][0]=the image you want to share
+            &p[title]=the title you want to share
+            &p[summary]=the description/summary you want to share" 
+            target="_blank">
+             <img src="your/path/to/facebook-icon.png" 
+               alt="Share on Facebook" />
+        </a>
+        -->
+        <a href="http://www.facebook.com/sharer.php?u=<%= url %>&p[images][0]=<%= img  %>&description=<%= desc %>">Facebook</a>
         <script src="lib/fitText.js" type="text/javascript"></script>
         <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
         <script src="js/questions.js"></script>
-        <script src="js/app.js"></script> 
+        <script src="js/app.js"></script>   
+        <!--
+        <script>
+            $('#facebook-Link').click(function () {
+                window.open($(this).attr('href'), 'sharer', 'width=626,height=436');
+                return false;
+            });
+        </script>
+        -->
     </body>
       
     
