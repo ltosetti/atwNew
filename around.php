@@ -117,11 +117,8 @@ echo '</pre>';?>
             </div>
         </div>
         <button id="btnStart" class="ribbon-outset border">start game</button>
-        <div id="copyRight" style="position:absolute; bottom:1%; right:1%; color:#fff;">&copy; 2018 MadDog Media</div>       
-    
+        <div id="copyRight" style="position:absolute; bottom:1%; right:1%; color:#fff;">&copy; 2018 MadDog Media</div>   
         <input type="text" name="score" id="inputScore" value="10" style="position:absolute;bottom:0;">
-      
-        
         
         <script src="lib/fitText.js" type="text/javascript"></script>
         <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
