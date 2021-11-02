@@ -122,7 +122,7 @@ echo '</pre>';?>
         
         <script src="lib/fitText.js" type="text/javascript"></script>
         <script src="https://f219a823068d097e49db-b14287cf40d335cde5226be95ca3ee6b.ssl.cf3.rackcdn.com/TweenMax.min.js" ></script>
-        <script src="js/questions.js"></script>
+        <script src="js/questions3.js"></script>
         <script src="js/app.js"></script>   
        
         <script>
